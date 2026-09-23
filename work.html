@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Work index" description="Studio Browne selected-work — numbered editorial index with filters & sort" -->
+<helmet>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--panel-greige);color:var(--text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+::selection{background:var(--sb-terracotta);color:var(--sb-porcelain)}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--sb-terracotta)}
+.sb-tag{white-space:nowrap}
+.sb-cta:hover{color:var(--sb-porcelain) !important;opacity:0.88}
+.sb-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.sb-grid{grid-template-columns:repeat(2,1fr) !important}}
+@media (max-width:600px){.sb-grid{grid-template-columns:1fr !important}}
+.sb-zoom{transition:transform .6s var(--ease-soft)}
+.sb-work-item:hover .sb-zoom{transform:scale(1.05)}
+.sb-work-item .sb-reveal{opacity:0;transform:translateY(4px);transition:opacity .3s var(--ease-soft),transform .3s var(--ease-soft)}
+.sb-work-item:hover .sb-reveal{opacity:1;transform:none}
+.sb-ip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(45,35,26,0.38);opacity:0;transition:opacity .45s var(--ease-soft);font-family:var(--font-sans);font-size:0.7rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--sb-porcelain);pointer-events:none;z-index:1}
+.sb-work-item:hover .sb-ip{opacity:1}
+.sb-sort{font-family:var(--font-sans);font-size:0.64rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary);background:transparent;border:1px solid var(--line-strong);border-radius:999px;padding:0.4rem 1.9rem 0.4rem 0.95rem;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'><path d='M1 1l4 4 4-4' fill='none' stroke='%23413F3E' stroke-width='1.3'/></svg>");background-repeat:no-repeat;background-position:right 0.85rem center}
+@media (max-width:640px){.sb-pad-x{padding-left:1.75rem !important;padding-right:1.75rem !important}}
+@media (hover:none){.sb-work-item .sb-reveal{opacity:1;transform:none}.sb-ip{opacity:1;background:rgba(45,35,26,0.3)}}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="ink" hide-bottom="{{ true }}" on-home="{{ goHome }}" on-left="{{ goStudio }}" on-right="{{ goWork }}" mark-src="assets/logo-mark.png" hint-size="1px,1px"></x-import>
+
+<main style="width:100%;background:var(--panel-greige)">
+<section class="sb-pad-x" style="padding:clamp(7rem,11vw,10rem) clamp(5rem,10vw,10rem) 2.5rem;display:flex;flex-direction:column;align-items:center;text-align:center">
+<div style="font-family:var(--font-sans);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-primary);margin-bottom:1.2rem">Selected Work — Index</div>
+<h1 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.3rem,2vw,1.75rem);line-height:1.35;margin:0;color:var(--text-primary);max-width:22ch;text-wrap:balance">Recent projects, <em style="color:var(--sb-terracotta)">Beverly Hills</em> to Baja.</h1>
+</section>
+
+<div class="sb-pad-x" style="padding:0 clamp(5rem,10vw,10rem) 1.6rem">
+<div style="display:flex;gap:0.55rem;flex-wrap:wrap;justify-content:center;max-width:1040px;margin:0 auto">
+<button class="sb-tag" data-filter="all" onClick="{{ onFilter }}" style="padding:0.42rem 0.95rem;border:1px solid var(--line-strong);border-radius:999px;font-family:var(--font-sans);font-size:0.64rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;background:var(--sb-ink);color:var(--sb-porcelain)">All Work</button>
+<button class="sb-tag" data-filter="los-angeles" onClick="{{ onFilter }}" style="padding:0.42rem 0.95rem;border:1px solid var(--line-strong);border-radius:999px;font-family:var(--font-sans);font-size:0.64rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--text-primary)">Los Angeles</button>
+<button class="sb-tag" data-filter="san-francisco" onClick="{{ onFilter }}" style="padding:0.42rem 0.95rem;border:1px solid var(--line-strong);border-radius:999px;font-family:var(--font-sans);font-size:0.64rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--text-primary)">San Francisco</button>
+<button class="sb-tag" data-filter="baja" onClick="{{ onFilter }}" style="padding:0.42rem 0.95rem;border:1px solid var(--line-strong);border-radius:999px;font-family:var(--font-sans);font-size:0.64rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--text-primary)">Baja</button>
+</div>
+</div>
+
+<div class="sb-pad-x" style="padding:0 clamp(5rem,10vw,10rem)"><div style="height:1px;background:var(--line-strong);max-width:1040px;margin:0 auto"></div></div>
+
+<div class="sb-pad-x" style="padding:1.2rem clamp(5rem,10vw,10rem) 0">
+<div style="display:flex;justify-content:flex-end;max-width:1040px;margin:0 auto">
+<select class="sb-sort" onChange="{{ onSort }}">
+<option value="recent">Sort — Recent</option>
+<option value="oldest">Sort — Oldest</option>
+<option value="location">Sort — Location A–Z</option>
+</select>
+</div>
+</div>
+
+<div class="sb-pad-x" style="padding:1rem clamp(5rem,10vw,10rem) clamp(6rem,10vw,9rem)">
+<div class="sb-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,3vw,3.2rem);align-items:start;max-width:1040px;margin:0 auto">
+<a class="sb-work-item" data-cat="san-francisco" data-year="2020" data-loc="Pacific Heights" href="vallejo.html">
+<div style="aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-vallejo" src="assets/images/work/work-vallejo.webp" shape="rect" placeholder="Drop a photo"></image-slot></div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">01</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">Vallejo</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Pacific Heights, SF</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--text-muted)">2020</span>
+</div>
+</a>
+<a class="sb-work-item" data-cat="san-francisco" data-year="2018" data-loc="Pacific Heights" href="jackson.html">
+<div style="aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-jackson" src="assets/images/jackson/jackson-exterior.webp" shape="rect" placeholder="Drop a photo"></image-slot></div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">02</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">Jackson</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Pacific Heights, SF</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--text-muted)">2018</span>
+</div>
+</a>
+<a class="sb-work-item" data-cat="san-francisco" data-year="2018" data-loc="Russian Hill" href="filbert.html">
+<div style="aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-filbert" src="assets/images/work/work-filbert.webp" shape="rect" placeholder="Drop a photo"></image-slot></div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">03</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">Filbert</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Russian Hill, SF</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--text-muted)">2018</span>
+</div>
+</a>
+<a class="sb-work-item" data-cat="san-francisco" data-year="2017" data-loc="Russian Hill" href="washington.html">
+<div style="aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-washington" src="assets/images/project-lounge.webp" shape="rect" placeholder="Drop a photo"></image-slot></div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">04</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">Washington</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Russian Hill, SF</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--text-muted)">2017</span>
+</div>
+</a>
+<div class="sb-work-item" data-cat="los-angeles" data-year="2025" data-loc="Beverly Hills" style="cursor:default">
+<div style="position:relative;aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-robertson" src="assets/images/work/work-robertson.webp" shape="rect" placeholder="Drop a photo"></image-slot></div><div class="sb-ip">In Progress</div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">05</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">Robertson</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Beverly Hills, CA</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--sb-terracotta)">In Progress</span>
+</div>
+</div>
+<a class="sb-work-item" data-cat="baja" data-year="2027" data-loc="San José del Cabo" href="project.html?p=cabo">
+<div style="position:relative;aspect-ratio:4 / 5;overflow:hidden;background:var(--surface-inset)"><div class="sb-zoom" style="width:100%;height:100%"><image-slot id="work-cabo" src="assets/images/work/work-cabo.webp" shape="rect" placeholder="Drop a photo"></image-slot></div><div class="sb-ip">In Progress</div></div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--line-strong);margin-top:0.9rem;padding-top:0.7rem">
+<div><div style="display:flex;align-items:baseline;gap:0.5rem"><span style="font-family:var(--font-title);color:var(--sb-terracotta);font-size:0.72rem">06</span><span style="font-family:var(--font-title);font-size:1.05rem;color:var(--text-primary)">San José del Cabo</span></div><div class="sb-reveal" style="font-family:var(--font-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:0.25rem">Baja California Sur, MX</div></div>
+<span style="font-family:var(--font-sans);font-size:0.62rem;letter-spacing:0.14em;color:var(--sb-terracotta)">In Progress</span>
+</div>
+</a>
+</div>
+</div>
+
+<section style="background:var(--panel-camel);min-height:80vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4rem;max-width:520px">
+<img src="assets/logo-mark.png" alt="Studio Browne" style="height:64px;width:auto;opacity:0.9">
+<p style="font-family:var(--font-title);font-size:1.25rem;line-height:1.5;color:var(--text-primary);margin:0.3rem 0 0;max-width:24ch">Let's live.</p>
+<div style="font-family:var(--font-sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-primary);line-height:2.1">Studio Browne · Beverly Hills, CA<br><a href="mailto:matt@studio-browne.com">matt@studio-browne.com</a> · <a href="tel:+13104862867">310.486.2867</a></div>
+<a href="contact.html" class="sb-cta" style="margin-top:0.6rem;display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;background:var(--sb-ink);color:var(--sb-porcelain);font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;border-radius:999px">Book a consultation <span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#CDC0A7"/><rect x="120" y="120" width="72" height="90" fill="#594C40"/><rect x="208" y="120" width="72" height="90" fill="#413F3E"/><rect x="120" y="226" width="160" height="26" fill="#8C6A55"/><text x="200" y="330" font-family="Georgia, serif" font-size="26" letter-spacing="5" fill="#413F3E" text-anchor="middle">WORK</text></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      goHome: () => { window.location.href = "index.html"; },
+      goStudio: () => { window.location.href = "studio.html"; },
+      goWork: () => { window.scrollTo({ top: 0, behavior: "smooth" }); },
+      onFilter: (e) => {
+        const cat = e.currentTarget.dataset.filter;
+        document.querySelectorAll('.sb-work-item').forEach((el) => {
+          el.style.display = (cat === 'all' || el.dataset.cat === cat) ? '' : 'none';
+        });
+        document.querySelectorAll('.sb-tag').forEach((t) => {
+          const on = t.dataset.filter === cat;
+          t.style.background = on ? 'var(--sb-ink)' : 'transparent';
+          t.style.color = on ? 'var(--sb-porcelain)' : 'var(--text-primary)';
+        });
+      },
+      onSort: (e) => {
+        const mode = e.currentTarget.value;
+        const grid = document.querySelector('.sb-grid');
+        if (!grid) return;
+        const items = Array.from(grid.querySelectorAll('.sb-work-item'));
+        items.sort((x, y) => {
+          if (mode === 'location') return x.dataset.loc.localeCompare(y.dataset.loc);
+          const dx = +x.dataset.year, dy = +y.dataset.year;
+          return mode === 'oldest' ? dx - dy : dy - dx;
+        });
+        items.forEach((el) => grid.appendChild(el));
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

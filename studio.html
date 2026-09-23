@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Studio / About" description="Studio Browne — about Matt Browne: intro, oxblood principal panel, experience & capabilities" -->
+<helmet>
+<script>window.SB_ASSET = "assets";</script>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--panel-greige);color:var(--text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+::selection{background:var(--sb-terracotta);color:var(--sb-porcelain)}
+a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
+@media (max-width:760px){.sb-studio-split{grid-template-columns:1fr !important}}
+/* Studio picture grid — each plate lifts and clears its neighbours on hover */
+.sb-pgrid .sb-plate{position:relative;z-index:1;transform-origin:center;will-change:transform,filter;
+  transition:transform .7s var(--ease-soft),filter .7s var(--ease-soft),box-shadow .7s var(--ease-soft)}
+.sb-pgrid:hover .sb-plate{filter:grayscale(.3) brightness(.88);transform:scale(.982)}
+.sb-pgrid .sb-plate:hover{filter:none;z-index:4;box-shadow:var(--shadow-lg)}
+.sb-pgrid .sb-p1:hover{transform:scale(1.038) translate(-1.2%,-1.2%)}
+.sb-pgrid .sb-p2:hover{transform:scale(1.038) translate(1.2%,-1.2%)}
+.sb-pgrid .sb-p3:hover{transform:scale(1.038) translate(-1.2%,1.2%)}
+.sb-pgrid .sb-p4:hover{transform:scale(1.038) translate(1.2%,1.2%)}
+.sb-pcap{z-index:2}
+.sb-pcap p{transition:opacity .7s var(--ease-soft)}
+.sb-pgrid:hover .sb-pcap p{opacity:.22}
+@media (hover:none){.sb-pgrid:hover .sb-plate{filter:none;transform:none}
+  .sb-pgrid:hover .sb-pcap p{opacity:1}}
+
+@media (max-width:720px){
+  .sb-pgrid .sb-pcap{position:static !important;transform:none !important;width:auto !important;
+    aspect-ratio:auto !important;grid-column:1 / -1;order:-1;padding:1.4rem 1.1rem}
+  .sb-pgrid .sb-pcap p{position:static !important;transform:none !important}
+}
+@media (prefers-reduced-motion:reduce){.sb-pgrid .sb-plate,.sb-pcap p{transition:none}
+  .sb-pgrid:hover .sb-plate,.sb-pgrid .sb-plate:hover{filter:none;transform:none;box-shadow:none}
+  .sb-pgrid:hover .sb-pcap p{opacity:1}}
+
+</style>
+</helmet>
+
+<x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="ink" hide-bottom="{{ true }}" on-home="{{ goHome }}" on-left="{{ goStudio }}" on-right="{{ goWork }}" mark-src="assets/logo-mark.png" hint-size="1px,1px"></x-import>
+
+<main style="width:100%;background:var(--panel-greige)">
+<div id="sbStudioHero" style="position:relative;width:100%;line-height:0;background:var(--panel-greige)">
+<div style="position:relative;overflow:hidden;height:min(80svh,120vw)">
+<video id="sbStudioHeroVid" src="assets/video/studio-loop.mp4" autoPlay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="display:block;position:absolute;top:0;left:-6.8%;width:112.9%;height:100%;object-fit:cover;object-position:center 36%"></video>
+</div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;top:calc(100% - min(30svh,42vw));height:min(30svh,42vw);z-index:2;pointer-events:none;background-image:url(assets/images/studio/organza-veil.webp);background-size:cover;background-position:center 18%;background-repeat:no-repeat;opacity:var(--sb-veil,0.08);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,1) 30%,rgba(0,0,0,0.85) 62%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,1) 30%,rgba(0,0,0,0.85) 62%,rgba(0,0,0,0) 100%)"></div>
+</div>
+<section aria-label="Studio pictures" style="position:relative;z-index:3;width:100%;padding:clamp(2.5rem,7vw,6rem) clamp(1.25rem,5vw,4.5rem) clamp(1.5rem,4vw,3rem)">
+<div class="sb-pgrid" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.5rem,1.4vw,1.1rem);max-width:1100px;margin:0 auto">
+<img class="sb-plate sb-p1" src="assets/images/studio/studio-02.webp" alt="Candlesticks on a marble mantel against walnut panelling" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
+<img class="sb-plate sb-p2" src="assets/images/studio/studio-01.webp" alt="Hand holding an oak sample over stone and tile finishes" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
+<img class="sb-plate sb-p3" src="assets/images/studio/studio-03.webp" alt="Art books and a plaster bust on a painted built-in" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
+<img class="sb-plate sb-p4" src="assets/images/studio/studio-06.webp" alt="Sheer curtain and afternoon light across a corner chair" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
+<div class="sb-pcap" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(27.6%,258px);aspect-ratio:1/1;background:var(--panel-greige)">
+<p style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0;padding:0 clamp(0.6rem,1.2vw,1rem);font-family:var(--font-manofa);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:1.6;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);text-align:center;text-wrap:pretty">Studio Browne is led by Matt Browne — interior designer &amp; digital artist — pairing hands-on craft with a photographer's eye and an early command of AI-assisted photorealistic rendering.</p>
+</div>
+</div>
+</section>
+<x-import component-from-global-scope="SBStudio" on-navigate="{{ onNavigate }}" hint-size="100%,100vh"></x-import>
+</main>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#CDC0A7"/><circle cx="200" cy="180" r="66" fill="#594C40"/><text x="200" y="330" font-family="Georgia, serif" font-size="26" letter-spacing="5" fill="#413F3E" text-anchor="middle">STUDIO</text></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;veilOpacity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.08,&quot;min&quot;:0,&quot;max&quot;:0.6,&quot;step&quot;:0.02,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero veil&quot;}}">
+class Component extends DCLogic {
+  // The corner frame is this site's only navigation and it is position:fixed, so its
+  // colour has to follow what is behind it. The footage is near-white plaster, so over
+  // the hero the glyphs go near-black (the light/sand branch is invisible on it); below
+  // the hero the override is dropped and CornerFrame's own camel default returns.
+  // tone stays "ink" in the markup, so if this never runs the page is still the shipped
+  // design rather than sand-on-sand.
+  applyVeil() {
+    const o = this.props && this.props.veilOpacity;
+    document.documentElement.style.setProperty("--sb-veil", String(typeof o === "number" ? o : 0.08));
+  }
+  componentDidUpdate() { this.applyVeil(); }
+  componentDidMount() {
+    this.applyVeil();
+    const v = document.getElementById("sbStudioHeroVid");
+    if (v) { v.muted = true; v.defaultMuted = true; v.volume = 0; const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+    // Measure what is actually behind the glyphs instead of guessing per section: this
+    // page runs plaster video, greige, oxblood and camel behind the same fixed nav, so
+    // any single hard-coded value collides with one of them.
+    const lum = (c) => {
+      const m = /(\d+),\s*(\d+),\s*(\d+)/.exec(c || "");
+      if (!m) return null;
+      const f = (v) => { v = +v / 255; return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+      return 0.2126 * f(m[1]) + 0.7152 * f(m[2]) + 0.0722 * f(m[3]);
+    };
+    const lumAt = (x, y) => {
+      const els = document.elementsFromPoint(x, y) || [];
+      for (const el of els) {
+        if (el.closest && el.closest("[data-sb-frame]")) continue;
+        const cs = getComputedStyle(el);
+        if (cs.position === "fixed") continue;
+        // The hero footage is near-white plaster; treat any video/image as light.
+        if (el.tagName === "VIDEO" || el.tagName === "IMG") return 0.82;
+        const L = lum(cs.backgroundColor);
+        if (L !== null && !/,\s*0\)$/.test(cs.backgroundColor)) return L;
+      }
+      return null;
+    };
+    // Per glyph, not per page: mid-scroll the S can sit on greige while STUDIO/WORK sit
+    // on the oxblood panel, so each slot gets its own colour.
+    this._prev = {};
+    const pad = 44;
+    this._onScroll = () => {
+      const h = window.innerHeight, w = window.innerWidth;
+      const at = { tl: [pad, pad + 24], tr: [w - pad, pad + 24], left: [pad - 10, h * 0.5], right: [w - pad + 10, h * 0.5] };
+      const s = document.documentElement.style;
+      let votes = 0, n = 0;
+      for (const k in at) {
+        const L = lumAt(at[k][0], at[k][1]);
+        if (L === null) continue;
+        const was = this._prev[k];
+        const dark = was === undefined ? L < 0.18 : (was === "light" ? L < 0.26 : L < 0.12);
+        n++; if (dark) votes++;
+        const next = dark ? "light" : "ink";
+        if (next === was) continue;
+        this._prev[k] = next;
+        s.setProperty("--sb-corner-ink-" + k, dark ? "var(--sb-paper)" : "#221f1b");
+      }
+      // The slot vars are the refinement; the base var is what every already-loaded
+      // CornerFrame actually reads, so it must always carry a usable colour too.
+      if (!n) return;
+      const baseDark = votes * 2 > n;
+      if (baseDark !== this._baseDark) {
+        this._baseDark = baseDark;
+        s.setProperty("--sb-corner-ink", baseDark ? "var(--sb-paper)" : "#221f1b");
+      }
+    };
+    // 6s (CornerFrame's default) leaves a visible dead zone mid-ramp when scrolling
+    // hero -> oxblood, which takes well under that.
+    document.documentElement.style.setProperty("--sb-corner-ease", "2.4s");
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    window.addEventListener("resize", this._onScroll, { passive: true });
+    this._onScroll();
+    this._heroTimer = setTimeout(this._onScroll, 120);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this._onScroll);
+    window.removeEventListener("resize", this._onScroll);
+    clearTimeout(this._heroTimer);
+    const s = document.documentElement.style;
+    ["", "-tl", "-tr", "-left", "-right"].forEach((k) => s.removeProperty("--sb-corner-ink" + k));
+    s.removeProperty("--sb-corner-ease");
+  }
+  renderVals() {
+    const go = {
+      home: "index.html",
+      studio: "studio.html",
+      work: "work.html",
+      project: "project.html",
+      contact: "contact.html",
+    };
+    return {
+      goHome: () => { window.location.href = go.home; },
+      goStudio: () => { window.location.href = go.studio; },
+      goWork: () => { window.location.href = go.work; },
+      onNavigate: (route) => { if (go[route]) window.location.href = go[route]; },
+    };
+  }
+}
+</script>
+</body>
+</html>

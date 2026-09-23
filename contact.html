@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Contact / Inquire" description="Studio Browne — inquiry route with understated underline form on greige panel" -->
+<helmet>
+<script>window.SB_ASSET = "assets";</script>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--panel-greige);color:var(--text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+::selection{background:var(--sb-terracotta);color:var(--sb-porcelain)}
+a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="ink" hide-bottom="{{ true }}" on-home="{{ goHome }}" on-left="{{ goStudio }}" on-right="{{ goWork }}" mark-src="assets/logo-mark.png" hint-size="1px,1px"></x-import>
+
+<main style="width:100%;background:var(--panel-greige)">
+<x-import component-from-global-scope="SBContact" on-navigate="{{ onNavigate }}" hint-size="100%,100vh"></x-import>
+</main>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#CDC0A7"/><rect x="112" y="140" width="176" height="112" fill="none" stroke="#594C40" stroke-width="10"/><path d="M112 140 L200 210 L288 140" fill="none" stroke="#594C40" stroke-width="10"/><text x="200" y="330" font-family="Georgia, serif" font-size="24" letter-spacing="4" fill="#413F3E" text-anchor="middle">INQUIRE</text></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const go = {
+      home: "index.html",
+      studio: "studio.html",
+      work: "work.html",
+      project: "project.html",
+      contact: "contact.html",
+    };
+    return {
+      goHome: () => { window.location.href = go.home; },
+      goStudio: () => { window.location.href = go.studio; },
+      goWork: () => { window.location.href = go.work; },
+      onNavigate: (route) => { if (go[route]) window.location.href = go[route]; },
+    };
+  }
+}
+</script>
+</body>
+</html>

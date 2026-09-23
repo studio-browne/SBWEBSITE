@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Homepage" description="Studio Browne home — hero clip, editable statement panels, project splits, contact" -->
+<helmet>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--surface-page);color:var(--text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;text-transform:uppercase}
+input::placeholder{text-transform:uppercase}
+::selection{background:var(--sb-terracotta);color:var(--sb-porcelain)}
+a{color:inherit;text-decoration:none;font:inherit}a:hover{color:var(--sb-terracotta)}
+main image-slot{filter:var(--img-filter);transition:filter .5s ease}
+#sbHeroVideo,#sbHeroVideoB{transition:opacity 1.5s ease-in-out}
+body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip}
+@media (max-width:860px){.sb-split{grid-template-columns:1fr !important;min-height:0 !important}.sb-ba{grid-template-columns:1fr !important;gap:3rem !important}.sb-media{aspect-ratio:4 / 5}.sb-split>div:not(.sb-media){padding-top:clamp(3rem,9vw,4rem) !important;padding-bottom:clamp(3rem,9vw,4rem) !important}}
+@media (max-width:640px){body{--sb-photo-w:min(64vw,290px)}.sb-panel{padding-left:1.75rem !important;padding-right:1.75rem !important}.sb-sig{right:0 !important;bottom:-34px !important}.sb-split a{white-space:nowrap;letter-spacing:0.16em !important}}
+@media (prefers-reduced-motion:reduce){#sbHeroVideo,#sbHeroVideoB{transition:opacity 1.5s ease-in-out !important}}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="{{ cornerTone }}" hide-bottom="{{ true }}" on-left="{{ goStudio }}" on-right="{{ goWork }}" hint-size="1px,1px"></x-import>
+<x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.LogoLoader" logo-src="assets/logo-mark.png" background="sand" hint-size="1px,1px"></x-import>
+
+<main ref="{{ rootRef }}" style="width:100%">
+<section data-screen-label="Hero" data-tone="ink" style="position:relative;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center">
+<video id="sbHeroVideo" autoplay muted playsinline preload="auto" poster="assets/images/hero-main-poster.webp" src="assets/video/hero-main.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--img-filter);opacity:1;transform:translateZ(0);backface-visibility:hidden;will-change:opacity"></video>
+<video id="sbHeroVideoB" muted playsinline preload="auto" src="assets/video/hero-main.mp4" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--img-filter);opacity:0;transform:translateZ(0);backface-visibility:hidden;will-change:opacity"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,45,34,0.34),rgba(58,45,34,0.10) 45%,rgba(58,45,34,0.42))"></div>
+<div id="sbHeroScrim" aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse 58% 44% at 50% 47%,rgba(45,35,26,0.45),rgba(45,35,26,0.26) 55%,rgba(45,35,26,0) 78%)"></div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(45,35,26,0.55) 0,rgba(45,35,26,0.55) 4%,rgba(45,35,26,0) 15%,rgba(45,35,26,0) 85%,rgba(45,35,26,0.55) 96%,rgba(45,35,26,0.55) 100%)"></div>
+<div id="sbWordmark" style="position:relative;z-index:1;font-family:var(--font-title);font-size:24pt;letter-spacing:0.5px;text-transform:uppercase;color:var(--sb-paper);transition:color 2.4s ease-in-out;text-align:center;line-height:1">Studio Browne</div>
+<div style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+<div id="sbMark" style="position:relative;height:clamp(38px,4vw,58px);aspect-ratio:1663 / 1330"><div id="sbMarkTint" role="img" aria-label="Studio Browne" style="position:absolute;inset:0;background-color:var(--sb-paper);-webkit-mask:url(assets/images/logo-mark-dark.png) center/contain no-repeat;mask:url(assets/images/logo-mark-dark.png) center/contain no-repeat;transition:background-color 2.4s ease-in-out"></div></div>
+<span id="sbBev" style="font-family:var(--font-sans);font-size:0.62rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--sb-paper);transition:color 2.4s ease-in-out;line-height:1;margin-top:1.4rem">Beverly Hills</span>
+</div>
+</section>
+
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-greige);min-height:38vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(4rem,6vw,5.5rem) clamp(5rem,10vw,10rem) calc(var(--sb-photo-w) * 0.625 + 3.5rem);position:relative">
+<div style="max-width:40ch;text-align:center">
+<div style="font-family:var(--font-sans);font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-primary);margin-bottom:1.8rem">Studio Browne</div>
+<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.85rem,1.4vw,1.15rem);line-height:1.5;letter-spacing:0.005em;color:var(--text-primary);margin:0">A full-service interior design practice working in warm, material-led modernism — plaster, walnut, stone and light — for clients from Los Angeles to Hawaii.</p>
+</div>
+</section>
+
+<div style="position:relative;z-index:2;height:0;display:flex;justify-content:center">
+<div style="position:relative;align-self:flex-start;transform:translateY(-50%);width:var(--sb-photo-w)">
+<div aria-hidden="true" style="position:absolute;inset:0;transform:translate(10px,10px);border:1px solid var(--sb-camel);pointer-events:none"></div>
+<div style="position:relative;background:var(--sb-paper);padding:12px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-founder" src="assets/images/founder-headshot-home.webp" shape="rect" placeholder="Drop the founder photo" style="display:block;width:100%;aspect-ratio:1030 / 1286;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<div aria-hidden="true" class="sb-sig" style="position:absolute;right:-16%;bottom:-40px;font-family:var(--font-hand);font-style:italic;font-weight:400;font-size:clamp(1.4rem,1.9vw,2.1rem);line-height:1;color:#1a1613;transform:rotate(-8deg);text-transform:none;letter-spacing:normal;white-space:nowrap;pointer-events:none;text-shadow:0.5px 0.5px 0 #1a1613">xx,&nbsp; Matt Browne</div>
+</div>
+</div>
+
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-stone);min-height:38vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--sb-photo-w) * 0.625 + 5rem) clamp(5rem,10vw,10rem) clamp(4rem,6vw,5.5rem);position:relative">
+<div style="max-width:40ch;text-align:center">
+<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.85rem,1.4vw,1.15rem);line-height:1.5;letter-spacing:0.005em;color:var(--text-primary);margin:0">We create timeless homes that imbue warmth and feeling, personally tailored to how our clients live. Known for a refined, contemporary aesthetic that blends craftsmanship, natural materials and a feeling of laid-back luxury.</p>
+</div>
+</section>
+
+<section data-screen-label="Robertson" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
+<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Robertson</h3>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Beverly Hills, CA &nbsp;·&nbsp; 2025</div>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Conceptual Design</div>
+</div>
+<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-canon-detail" src="assets/images/homepage/canon-detail.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="robertson.html">View Project</a></span>
+</div>
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-canon-hero" src="assets/images/homepage/canon-hero.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+</section>
+
+
+<section data-screen-label="Vallejo" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh">
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-broadway-hero" src="assets/images/homepage/broadway-hero.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
+<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Vallejo</h3>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Pacific Heights, SF &nbsp;·&nbsp; 2020</div>
+</div>
+<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-broadway-detail" src="assets/images/homepage/broadway-detail.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="vallejo.html">View Project</a></span>
+</div>
+</section>
+
+<section data-screen-label="Jackson" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
+<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Jackson</h3>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Pacific Heights, SF &nbsp;·&nbsp; 2018</div>
+</div>
+<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-nobhill-detail" src="assets/images/homepage/nobhill-detail.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="jackson.html">View Project</a></span>
+</div>
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-nobhill-hero" src="assets/images/jackson/jackson-living-room.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+</section>
+
+<section data-screen-label="Broadway" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh">
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-broadway2-hero" src="assets/images/project-living.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
+<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Broadway</h3>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Pacific Heights, SF &nbsp;·&nbsp; 2019</div>
+</div>
+<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-broadway2-detail" src="assets/images/project-bath.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="project.html?p=broadway">View Project</a></span>
+</div>
+</section>
+
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-greige);min-height:60vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
+<span style="font-family:var(--font-title);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:400;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:0.2rem"><a href="work.html">View all projects</a></span>
+</section>
+
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-camel);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.6rem;max-width:520px">
+<img src="assets/logo-mark.png" alt="Studio Browne" style="height:72px;width:auto;opacity:0.9">
+<p style="font-family:var(--font-sans);font-size:0.88rem;line-height:1.6;color:var(--text-primary);margin:0.4rem 0 0;max-width:34ch">Rooted in warm, material-led design, Studio Browne creates considered homes for clients from Los Angeles to Hawaii.</p>
+<div style="font-family:var(--font-sans);font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary);line-height:2">Studio Browne · Beverly Hills, CA<br>matt@studio-browne.com<br>310.486.2867</div>
+<form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:1.4rem;width:min(360px,80vw)">
+<div style="font-family:var(--font-sans);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary)">Sign up to our studio newsletter</div>
+<input placeholder="YOUR EMAIL ADDRESS" required style="width:100%;text-align:center;background:transparent;border:0;border-bottom:1px solid rgba(58,45,34,0.45);padding:0.5rem 0;font-family:var(--font-sans);font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-primary);outline:none">
+<button type="submit" style="background:none;border:0;cursor:pointer;font-family:var(--font-sans);font-size:0.75rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary)">Submit</button>
+</form>
+</div>
+</section>
+</main>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#CDC0A7"/><text x="52" y="96" font-family="Georgia, serif" font-size="56" fill="#413F3E">S</text><text x="348" y="96" font-family="Georgia, serif" font-size="56" fill="#413F3E" text-anchor="end">B</text><circle cx="200" cy="212" r="60" fill="none" stroke="#594C40" stroke-width="10"/><text x="200" y="360" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#413F3E" text-anchor="middle">STUDIO BROWNE</text></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;atmosphere&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Gallery&quot;,&quot;options&quot;:[&quot;Gallery&quot;,&quot;Warm sand&quot;,&quot;Dusk clay&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;imageTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Natural&quot;,&quot;options&quot;:[&quot;Natural&quot;,&quot;Warm film&quot;,&quot;Black &amp; white&quot;,&quot;Faded&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;heroSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.5,&quot;min&quot;:0.35,&quot;max&quot;:1.25,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;fadeSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.2,&quot;min&quot;:0.5,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;heroTint&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Shifting&quot;,&quot;options&quot;:[&quot;Shifting&quot;,&quot;Fixed&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;heroTextTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Paper&quot;,&quot;options&quot;:[&quot;Paper&quot;,&quot;Camel&quot;,&quot;Ink&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;heroScrim&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.45,&quot;min&quot;:0,&quot;max&quot;:0.6,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { cornerTone: "light" };
+  apply(el) {
+    if (el) this._root = el;
+    const root = this._root;
+    if (!root) return;
+    const p = this.props || {};
+    const filter = {
+      "Natural": "saturate(0.96) contrast(1.02)",
+      "Warm film": "saturate(1.06) contrast(1.03) sepia(0.16) brightness(1.02)",
+      "Black & white": "grayscale(1) contrast(1.05)",
+      "Faded": "saturate(0.8) contrast(0.92) brightness(1.06)",
+    }[p.imageTreatment || "Natural"];
+    const atmo = {
+      "Gallery": {},
+      "Warm sand": { "--surface-page": "#D6C9B0", "--panel-greige": "#D2C4AA", "--panel-stone": "#C6B99F", "--panel-camel": "#C2A67E", "--sb-paper": "#E3DAC8" },
+      "Dusk clay": { "--surface-page": "#BEAB8F", "--panel-greige": "#BBA88C", "--panel-stone": "#AD997D", "--panel-camel": "#A8895F", "--sb-paper": "#C9BCA3" },
+    }[p.atmosphere || "Gallery"] || {};
+    const vars = { "--img-filter": filter, ...atmo };
+    for (const k in vars) root.style.setProperty(k, vars[k]);
+  }
+  heroKey() {
+    const p = this.props || {};
+    return [p.fadeSeconds, p.heroSpeed, p.heroTextTone, p.heroScrim, p.heroTint].join("/");
+  }
+  componentDidUpdate() {
+    this.apply();
+    const key = this.heroKey();
+    if (this._heroKey !== undefined && key !== this._heroKey) { this._heroKey = key; this.restartHero(); }
+  }
+  restartHero() {
+    if (this._stop) this._stop();
+    clearTimeout(this._boot);
+    (this._timers || []).forEach(clearTimeout);
+    this._timers = [];
+    this._boot = setTimeout(() => this.startHero(), 40);
+  }
+  componentDidMount() {
+    this.apply();
+    this._timers = [];
+    this._heroKey = this.heroKey();
+    this._boot = setTimeout(() => this.startHero(), 80);
+    this._onScroll = () => {
+      const wm = document.getElementById("sbWordmark");
+      const y = window.scrollY, h = window.innerHeight || 1;
+      if (wm) wm.style.opacity = String(Math.max(0, 1 - y / (h * 0.6)));
+      // Light while the fixed chrome still sits on the hero video, dark once the sand
+      // page ground has scrolled under it. Hysteresis so it cannot chatter at the edge.
+      const onHero = this._cornerLight === undefined ? y < h * 0.5 : (this._cornerLight ? y < h * 0.58 : y < h * 0.42);
+      // Written on EVERY call, not just on the crossing: this is how each new hero tint
+      // reaches the fixed corner glyphs. Only the re-render below is throttled.
+      document.documentElement.style.setProperty("--sb-corner-ink", onHero ? (this._heroTone || "var(--sb-paper)") : "#221f1b");
+      if (onHero !== this._cornerLight) {
+        this._cornerLight = onHero;
+        // "light" is not just a colour: it is the branch that carries the glow the
+        // glyphs need to hold up over moving imagery.
+        const t = onHero ? "light" : "ink";
+        if (this.state.cornerTone !== t) this.setState({ cornerTone: t });
+      }
+    };
+    // Match the corner glyphs' colour ramp to the hero type's 2.4s crossfade so every
+    // mark on the hero lands on the new tint together.
+    document.documentElement.style.setProperty("--sb-corner-ease", "2.4s");
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._boot);
+    clearInterval(this._toneTimer);
+    (this._timers || []).forEach(clearTimeout);
+    window.removeEventListener("scroll", this._onScroll);
+    document.documentElement.style.removeProperty("--sb-corner-ink");
+    document.documentElement.style.removeProperty("--sb-corner-ease");
+  }
+  // Ivory -> cream -> sand. One shared value drives wordmark, BEVERLY HILLS, the
+  // brushstroke mark (alpha-masked, so it takes the colour exactly) and the fixed
+  // corner glyphs, so every mark on the hero is the same colour at any instant.
+  // Straight from the client palette: paper -> sand -> camel. The old set sat within
+  // three points of itself, which read as one colour; camel is a real brown-beige and
+  // gives the loop a visible bottom end.
+  static TINTS = ["var(--sb-paper)", "var(--sb-sand)", "var(--sb-camel)"];
+  setTone(tone) {
+    // Fixed-tone fallback (tweak: Hero tint = Fixed). Switching between ink and camel
+    // mid-clip is what used to make the wordmark disappear — it passes through the
+    // footage's own warm mid-tone — so the fixed branch never animates.
+    const c = tone === "Ink" ? "#221f1b" : tone === "Camel" ? "var(--sb-camel)" : "var(--sb-paper)";
+    this.applyTint(c);
+  }
+  applyTint(c) {
+    if (c === this._heroTone) return;
+    const wm = document.getElementById("sbWordmark");
+    const bev = document.getElementById("sbBev");
+    const mk = document.getElementById("sbMarkTint");
+    if (wm) wm.style.color = c;
+    if (bev) bev.style.color = c;
+    if (mk) mk.style.backgroundColor = c;
+    // The corner letters and nav are fixed and outlive the hero, so they cannot simply
+    // inherit the hero tone: _onScroll decides based on what is actually behind them.
+    this._heroTone = c;
+    if (this._onScroll) this._onScroll();
+  }
+  startHero() {
+    // Never leave a previous frame loop running: two loops racing each other is what
+    // produces phantom seeks and doubled dissolves.
+    if (this._stop) this._stop();
+    const a = document.getElementById("sbHeroVideo");
+    const b = document.getElementById("sbHeroVideoB");
+    if (!a) return;
+    // One authored montage (dining -> kitchen -> living) that already carries its own
+    // dissolves. It fades up from black and back out to black, so playback rides only the
+    // lit window and the two elements cross-dissolve at the loop point: no black flash,
+    // no hard cut, no seek back to frame 1 while anything is visible.
+    const START = 1.5, LOOP_AT = 12.4, PREROLL = 1.2, WARM = 0.9;
+    const XFADE = Math.max(0.5, this.props.fadeSeconds ?? 1.2);
+    const rate = Math.max(0.35, Math.min(1.25, this.props.heroSpeed ?? 0.5));
+    const els = [a, b].filter(Boolean);
+    els.forEach((el) => {
+      el.muted = true; el.loop = false; el.playsInline = true;
+      el.style.transition = "opacity " + XFADE + "s ease-in-out";
+      try { el.playbackRate = rate; } catch (e) {}
+    });
+    const play = (el) => { const p = el.play(); if (p && p.catch) p.catch(() => {}); };
+    const seek = (el, t) => { try { el.currentTime = t; } catch (e) {} };
+    let stopped = false;
+    clearInterval(this._toneTimer);
+    this._stop = () => { stopped = true; clearInterval(this._toneTimer); };
+    let front = a, back = b, prerolled = false;
+    const tick = () => {
+      if (stopped) return;
+      requestAnimationFrame(tick);
+      const t = front.currentTime;
+      // The montage carries three scenes between START and LOOP_AT; step the shared
+      // tint on each scene so the type drifts with the imagery rather than on a timer
+      // of its own. The swap to the incoming clip lands back at band 0 by itself.
+      if (this._tintOn) {
+        const i = Math.max(0, Math.min(2, Math.floor((t - START) / ((LOOP_AT - START) / 3))));
+        if (i !== this._tintIdx) { this._tintIdx = i; this.applyTint(TINTS[i]); }
+      }
+      if (!back) { if (t >= LOOP_AT) seek(front, START); return; }
+      // Warm the incoming decoder while it is still fully hidden.
+      if (!prerolled && t >= LOOP_AT - PREROLL) {
+        prerolled = true;
+        seek(back, Math.max(0, START - WARM));
+        play(back);
+        return;
+      }
+      // Trigger off the INCOMING clip's own time, not the outgoing one's: however long the
+      // decoder took to spin up, the dissolve always begins on the first lit frame.
+      if (prerolled && back.currentTime >= START) {
+        back.style.opacity = "1";
+        front.style.opacity = "0";
+        const out = front;
+        this._timers.push(setTimeout(() => {
+          if (stopped) return;
+          try { out.pause(); } catch (e) {}
+          seek(out, START);
+        }, XFADE * 1000 + 250));
+        front = back; back = out; prerolled = false;
+      }
+    };
+    const TINTS = this.constructor.TINTS;
+    this._tintOn = (this.props.heroTint ?? "Shifting") === "Shifting";
+    this._tintIdx = -1;
+    this._heroTone = null;
+    if (this._tintOn) this.applyTint(TINTS[0]);
+    else this.setTone(this.props.heroTextTone || "Paper");
+    // Soft pool of shade under the type: holds the wordmark above 3:1 even on the
+    // brightest frame of the montage, without flattening the image as a whole.
+    const scrim = document.getElementById("sbHeroScrim");
+    if (scrim) {
+      const sa = Math.max(0, Math.min(0.6, this.props.heroScrim ?? 0.45));
+      scrim.style.background = "radial-gradient(ellipse 58% 44% at 50% 47%,rgba(45,35,26," +
+        sa.toFixed(2) + "),rgba(45,35,26," + (sa * 0.58).toFixed(2) + ") 55%,rgba(45,35,26,0) 78%)";
+    }
+    const begin = () => {
+      if (stopped) return;
+      seek(a, START);
+      a.style.opacity = "1";
+      if (b) b.style.opacity = "0";
+      play(a);
+      requestAnimationFrame(tick);
+    };
+    if (a.readyState >= 1) begin();
+    else a.addEventListener("loadedmetadata", begin, { once: true });
+  }
+  renderVals() {
+    return {
+      rootRef: (el) => this.apply(el),
+      cornerTone: this.state.cornerTone,
+      onSubmit: (e) => { e.preventDefault(); },
+      goStudio: () => { window.location.href = "studio.html"; },
+      goWork: () => { window.location.href = "work.html"; },
+    };
+  }
+}
+</script>
+</body>
+</html>
