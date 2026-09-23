@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Caveat:wght@400;600;700&display=swap");
+
+/* ── styles.css ── */
+/* ============================================================
+   STUDIO BROWNE — Design System
+   Global entry point. Import this one file to receive every
+   token and webfont. Keep this file as @import lines only.
+   ============================================================ */
+
+/* ── tokens/fonts.css ── */
+/* ============================================================
+   STUDIO BROWNE — Fonts
+   Manofa Condensed is the house display face (uploaded, real).
+   Sorts Mill Goudy (serif) and Mulish (sans) are the house pairing,
+   loaded from Google Fonts; Jost stands in for Futura on the
+   wordmark only. See the House pairing note below.
+   ============================================================ */
+
+/* @font-face Manofa 400 700 normal: declared by tokens.json (fonts/manofa-condensed.ttf) */
+
+/* @font-face Homer 400 normal: declared by tokens.json (fonts/homer-regular.ttf) */
+
+/* House pairing (per brand reference, 2026-07):
+   · Serif headlines — Goudy Old Style feel → "Sorts Mill Goudy" (open substitute)
+   · Body sans — soft grotesque → "Mulish" (open substitute)
+   · "Jost" retained as the Futura substitute for the wordmark only.
+   · "Caveat" — handwritten marker/signature accents. */
+
+
+/* ── styles.css ── */
+
+/* ── tokens/colors.css ── */
+/* ============================================================
+   STUDIO BROWNE — Color
+   Client palette: warm, desaturated earth neutrals.
+   594C40 coffee · B59E7D camel · CDC0A7 sand ·
+   ABA496 taupe · 413F3E charcoal · 3A2D22 espresso
+   ============================================================ */
+
+:root {
+}
+
+/* ── styles.css ── */
+
+/* ── tokens/typography.css ── */
+/* ============================================================
+   STUDIO BROWNE — Typography
+   Three voices:
+   · Manofa (titles)        — headings/titles, uppercase statements
+   · Sorts Mill Goudy       — editorial serif headlines, pull quotes
+   · Mulish                 — body copy, labels, UI
+   ============================================================ */
+
+:root { /* @kind font */
+  --fs-h3:        1.75rem; /* @kind font */
+  --fs-h4:        1.25rem; /* @kind font */
+  --fs-body-lg:   1.1875rem; /* @kind font */
+  --fs-body:      1.0625rem; /* @kind font */
+  --fs-small:     0.9375rem; /* @kind font */
+  --fs-label:     0.75rem; /* @kind other */
+  --lh-body:   1.65; /* @kind other */
+
+  /* Tracking */
+  --ls-label:  0.22em; /* @kind other */
+}
+
+/* ── styles.css ── */
+
+/* ── tokens/spacing.css ── */
+/* ============================================================
+   STUDIO BROWNE — Spacing, radii, layout
+   Generous, editorial whitespace. Base unit = 4px.
+   ============================================================ */
+
+:root {   /* used sparingly, for tags/buttons */
+  --radius-arch: 50% 50% 0 0 / 100% 100% 0 0;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem); /* @kind spacing */
+  --measure:     68ch;   /* comfortable reading width */
+}
+
+/* ── styles.css ── */
+
+/* ── tokens/effects.css ── */
+/* ============================================================
+   STUDIO BROWNE — Effects
+   Shadows are soft, warm and low — as if cast by afternoon sun.
+   Never cool grey drop shadows. Motion is slow and unhurried.
+   ============================================================ */
+
+:root {
+}
+
+/* ── styles.css ── */
+
+
+/* ── tokens/fonts.css ── */
+
+/* ── tokens/colors.css ── */
+
+/* ── tokens/typography.css ── */
+
+/* ── tokens/spacing.css ── */
+
+/* ── tokens/effects.css ── */
+
