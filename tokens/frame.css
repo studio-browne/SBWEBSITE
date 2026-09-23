@@ -1,0 +1,67 @@
+/* ============================================================
+   STUDIO BROWNE — Corner frame rails
+   Horizontal only. The brand letters keep their position at the
+   top of the viewport and the nav words keep their mid-height
+   position — nothing moves vertically. Each simply centres
+   across its gutter: left rail on gutter/2, right rail mirrored.
+   ============================================================ */
+
+:root {
+  /* The rail IS the page gutter — the site insets content by
+     clamp(1.5rem, 5vw, 4rem) — so gutter/2 is the true centreline.
+     Floored at 40px so the glyphs still clear copy on small screens. */
+  --sb-rail: clamp(40px, 5vw, 64px);
+}
+
+/* the CornerFrame wrapper is the div holding the two vertical nav words */
+
+/* ---- S : horizontal centring only, top untouched ---- */
+div:has(> span[style*="vertical-rl"]) > span[style*="left:"]:not([style*="vertical-rl"]) {
+  left: calc(var(--sb-rail) / 2) !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+/* ---- B : mirrored ---- */
+div:has(> span[style*="vertical-rl"]) > span[style*="right:"]:not([style*="vertical-rl"]) {
+  right: calc(var(--sb-rail) / 2) !important;
+  left: auto !important;
+  transform: translateX(50%) !important;
+}
+
+/* ---- STUDIO : keeps its own vertical centring (-50% of its height) ---- */
+div:has(> span[style*="vertical-rl"]) > span[style*="vertical-rl"][style*="left:"] {
+  left: calc(var(--sb-rail) / 2) !important;
+  right: auto !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* ---- WORK : mirrored ---- */
+div:has(> span[style*="vertical-rl"]) > span[style*="vertical-rl"][style*="right:"] {
+  right: calc(var(--sb-rail) / 2) !important;
+  left: auto !important;
+  transform: translate(50%, -50%) !important;
+}
+
+/* keep the glyphs legible in a narrow gutter */
+@media (max-width: 720px) {
+  div:has(> span[style*="vertical-rl"]) > span:not([style*="vertical-rl"]) {
+    font-size: 1.9rem !important;
+  }
+  div:has(> span[style*="vertical-rl"]) > span[style*="vertical-rl"] {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.16em !important;
+  }
+}
+
+/* Reserve the rails on narrow screens so copy never runs under them.
+   Full-bleed media still spans edge to edge. */
+@media (max-width: 720px) {
+  main { padding-left: var(--sb-rail); padding-right: var(--sb-rail); box-sizing: border-box; }
+  main .sb-pad-x { padding-left: 0 !important; padding-right: 0 !important; }
+  main .sb-bleed,
+  main > #sbStudioHero {
+    margin-left: calc(var(--sb-rail) * -1);
+    margin-right: calc(var(--sb-rail) * -1);
+  }
+}

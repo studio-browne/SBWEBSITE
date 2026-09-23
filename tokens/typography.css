@@ -1,0 +1,44 @@
+/* ============================================================
+   STUDIO BROWNE — Typography
+   Three voices:
+   · Manofa (titles)        — headings/titles, uppercase statements
+   · Sorts Mill Goudy       — editorial serif headlines, pull quotes
+   · Mulish                 — body copy, labels, UI
+   ============================================================ */
+
+:root {
+  --font-display: "Manofa", "Futura", "Century Gothic", sans-serif; /* wordmark only */
+  --font-title:   "Manofa", "Futura", sans-serif;                   /* Manofa Condensed — headings/titles */
+  --font-serif:   "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* editorial serif */
+  --font-sans:    "Mulish", "Helvetica Neue", system-ui, sans-serif; /* body sans */
+  --font-hand:    "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* signature accents — italic serif */
+  --font-manofa:  "Manofa", "Futura", sans-serif;                   /* alias of --font-title */
+
+  /* Type scale (fluid-friendly base = 16px) */
+  --fs-display:   clamp(3.5rem, 8vw, 7rem); /* @kind font */
+  --fs-h1:        clamp(2.5rem, 5vw, 4rem); /* @kind font */
+  --fs-h2:        clamp(2rem, 3.5vw, 2.75rem); /* @kind font */
+  --fs-h3:        1.75rem; /* @kind font */
+  --fs-h4:        1.25rem; /* @kind font */
+  --fs-body-lg:   1.1875rem; /* @kind font */
+  --fs-body:      1.0625rem; /* @kind font */
+  --fs-small:     0.9375rem; /* @kind font */
+  --fs-label:     0.75rem; /* @kind font */
+
+  /* Weights */
+  --fw-light:  300; /* @kind font */
+  --fw-reg:    400; /* @kind font */
+  --fw-med:    500; /* @kind font */
+  --fw-semi:   600; /* @kind font */
+  --fw-bold:   700; /* @kind font */
+
+  /* Line heights */
+  --lh-tight:  1.04; /* @kind other */
+  --lh-snug:   1.2; /* @kind other */
+  --lh-body:   1.65; /* @kind other */
+
+  /* Tracking */
+  --ls-label:  0.22em; /* @kind other */
+  --ls-display: 0.01em; /* @kind other */
+  --ls-tight:  -0.01em; /* @kind other */
+}

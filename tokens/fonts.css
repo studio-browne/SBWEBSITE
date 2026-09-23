@@ -1,0 +1,21 @@
+/* ============================================================
+   STUDIO BROWNE — Fonts
+   Manofa Condensed is the house display face (uploaded, real).
+   Three families only, site-wide: Manofa Condensed (local, titles),
+   Sorts Mill Goudy (serif) and Mulish (sans), both from Google Fonts.
+   ============================================================ */
+
+@font-face {
+  font-family: "Manofa";
+  src: url("../assets/fonts/manofa-condensed.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* House pairing (per brand reference, 2026-07):
+   · Serif headlines — Goudy Old Style feel → "Sorts Mill Goudy" (open substitute)
+   · Body sans — soft grotesque → "Mulish" (open substitute)
+   · Signature accents use the serif in italic.
+   Three families only: Manofa, Sorts Mill Goudy, Mulish. */
+@import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
