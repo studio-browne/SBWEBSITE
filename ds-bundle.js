@@ -259,8 +259,9 @@ function LogoLoader(props) {
   const ink = props.ink || ground.ink;
   const canvasRef = React.useRef(null);
   const rootRef = React.useRef(null);
-  const [done, setDone] = React.useState(false);
+  const [done, setDone] = React.useState(function(){try{return !!window.__sbLogoIntroPlayed}catch(e){return false}}());
   React.useEffect(() => {
+    try{ if (window.__sbLogoIntroPlayed) { setDone(true); return; } }catch(e){}
     let raf,
       start = null,
       cancelled = false;
@@ -290,7 +291,7 @@ function LogoLoader(props) {
           root.style.opacity = fade;
           canvasRef.current.style.transform = `scale(${1.025 - 0.025 * settle})`;
         }
-        if (t < 4.0) raf = requestAnimationFrame(tick);else setDone(true);
+        if (t < 4.0) raf = requestAnimationFrame(tick);else { try{window.__sbLogoIntroPlayed=true}catch(e){} setDone(true); }
       };
       raf = requestAnimationFrame(tick);
     };
