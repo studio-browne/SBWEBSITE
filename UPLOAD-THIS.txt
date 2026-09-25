@@ -1,0 +1,70 @@
+BROADWAY - REAL PHOTOGRAPHY, PAGE FINISHED
+===========================================
+
+23 files. One upload, about 2 MB. It will not choke.
+
+
+WHAT TO DO
+----------
+1. Go to  github.com/mattbrownedesign-bit/STUDIO-BROWNE-SITE
+
+2. Click "Add file", then "Upload files".
+
+3. From this folder, select and drag in together:
+     broadway.html
+     index.html
+     work.html
+     the folder  assets
+
+4. Commit message:  broadway photography
+   Click "Commit changes".
+
+5. Wait two minutes, then hard-reload:  Ctrl+Shift+R
+     https://mattbrownedesign-bit.github.io/STUDIO-BROWNE-SITE/broadway.html
+
+
+THE SEQUENCE
+------------
+Hero        the suspended leather bed
+Entry       the stairwell chandelier, beside the copy
+Pair        limestone fireplace  |  slat-wall bedroom
+Wide        kitchen
+Sketch      your pen drawing beside the steel frame in the shop
+Quote
+Wide        the bedroom render
+Wide        the ring fixture against the blue ceiling
+Pair        chandelier full  |  chandelier against the windows
+Wide        arms past the column
+Pair        rail detail  |  brass cone
+Solo        chandelier over the stairwell, centred and narrower
+Wide        chain tassels and the round mirror
+Materials   the ring from below, beside the copy
+Wide        stairwell
+Wide        brass bowl close-up
+
+19 photographs. Page runs about 12,200 pixels tall.
+
+Work index  Broadway sits at 02, between Vallejo and Jackson.
+Homepage    the Broadway card uses the render and the fireplace.
+
+
+THE COPY IS MINE, NOT YOURS
+---------------------------
+I wrote it from what the photographs show - the chandelier through
+three floors, the restraint everywhere else. It is a draft.
+
+The details table currently reads:
+  Scope        Full-service residential
+  Custom       Chandelier, ring fixture, suspended bed
+  Materials    Limestone, walnut, brass
+  Year         2019
+  Photography  Studio Browne
+
+Correct anything wrong and send it back, or tell me what to change.
+
+
+WHAT I DID TO THE PHOTOS
+------------------------
+Resized for web, converted to .webp, metadata stripped. No cropping
+except the work-index cover, no colour changes. Your originals are
+untouched wherever you keep them.
