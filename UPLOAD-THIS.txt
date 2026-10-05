@@ -1,70 +1,57 @@
-BROADWAY - REAL PHOTOGRAPHY, PAGE FINISHED
-===========================================
+STUDIO BROWNE — what to upload to GitHub
+========================================
+Everything in THIS folder. 66 files. Nothing else on your
+computer needs to go up.
 
-23 files. One upload, about 2 MB. It will not choke.
+   6 web pages      index, work, broadway, jackson, filbert, vallejo
+  60 photos         inside the assets folder
 
-
-WHAT TO DO
-----------
-1. Go to  github.com/mattbrownedesign-bit/STUDIO-BROWNE-SITE
-
-2. Click "Add file", then "Upload files".
-
-3. From this folder, select and drag in together:
-     broadway.html
-     index.html
-     work.html
-     the folder  assets
-
-4. Commit message:  broadway photography
-   Click "Commit changes".
-
-5. Wait two minutes, then hard-reload:  Ctrl+Shift+R
-     https://mattbrownedesign-bit.github.io/STUDIO-BROWNE-SITE/broadway.html
+Do it in two drags, not one. The uploader has silently dropped
+files on you before when given too many at once.
 
 
-THE SEQUENCE
-------------
-Hero        the suspended leather bed
-Entry       the stairwell chandelier, beside the copy
-Pair        limestone fireplace  |  slat-wall bedroom
-Wide        kitchen
-Sketch      your pen drawing beside the steel frame in the shop
-Quote
-Wide        the bedroom render
-Wide        the ring fixture against the blue ceiling
-Pair        chandelier full  |  chandelier against the windows
-Wide        arms past the column
-Pair        rail detail  |  brass cone
-Solo        chandelier over the stairwell, centred and narrower
-Wide        chain tassels and the round mirror
-Materials   the ring from below, beside the copy
-Wide        stairwell
-Wide        brass bowl close-up
+DRAG 1 — the pages
+------------------
+In your repository, click "Add file" > "Upload files".
 
-19 photographs. Page runs about 12,200 pixels tall.
+Select the six .html files in this folder and drag them in
+together. Do NOT drag the assets folder in this pass.
 
-Work index  Broadway sits at 02, between Vallejo and Jackson.
-Homepage    the Broadway card uses the render and the fireplace.
+Commit message:  Pages
+Click "Commit changes".
 
 
-THE COPY IS MINE, NOT YOURS
----------------------------
-I wrote it from what the photographs show - the chandelier through
-three floors, the restraint everywhere else. It is a draft.
+DRAG 2 — the photos
+-------------------
+"Add file" > "Upload files" again.
 
-The details table currently reads:
-  Scope        Full-service residential
-  Custom       Chandelier, ring fixture, suspended bed
-  Materials    Limestone, walnut, brass
-  Year         2019
-  Photography  Studio Browne
+Drag in the single folder called  assets
 
-Correct anything wrong and send it back, or tell me what to change.
+Wait for all 60 to finish before committing. If the count on
+screen is lower than 60, cancel and drag the assets folder
+again — do not commit a short upload.
+
+Commit message:  Photos
+Click "Commit changes".
 
 
-WHAT I DID TO THE PHOTOS
-------------------------
-Resized for web, converted to .webp, metadata stripped. No cropping
-except the work-index cover, no colour changes. Your originals are
-untouched wherever you keep them.
+CHECK IT
+--------
+Give it about a minute, then open:
+
+  https://YOUR-USERNAME.github.io/REPO-NAME/
+
+  - Homepage should show Jackson with the blue Victorian
+  - Work page should list 6 projects, Filbert at 03
+  - broadway.html and jackson.html should both open
+
+
+WHAT CHANGED THIS ROUND
+-----------------------
+Broadway      new project page, work cover, homepage card
+Jackson       new project page, 9 photos, work cover, homepage card
+Filbert       26 photos, moved to 03 on the work page
+Vallejo       3 photos added, new homepage card photo
+Washington    hidden from the work page (page file still exists,
+              the card is commented out in work.html)
+Homepage      project rows resized to 4:5
