@@ -11,7 +11,8 @@
   --font-title:   "Manofa", "Futura", sans-serif;                   /* Manofa Condensed — headings/titles */
   --font-serif:   "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* editorial serif */
   --font-sans:    "Mulish", "Helvetica Neue", system-ui, sans-serif; /* body sans */
-  --font-hand:    "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* signature accents — italic serif */
+  --font-hand:    "Homer", "Segoe Script", "Bradley Hand", cursive; /* Matt's signature */
+  --font-quote:   "Gettysburg", "Homer", "Segoe Script", cursive;  /* handwritten quote overlays */
   --font-manofa:  "Manofa", "Futura", sans-serif;                   /* alias of --font-title */
 
   /* Type scale (fluid-friendly base = 16px) */

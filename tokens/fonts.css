@@ -13,6 +13,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Homer";
+  src: url("../assets/fonts/homer-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gettysburg";
+  src: url("../assets/fonts/gettysburg-bold.otf") format("opentype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* House pairing (per brand reference, 2026-07):
    · Serif headlines — Goudy Old Style feel → "Sorts Mill Goudy" (open substitute)
    · Body sans — soft grotesque → "Mulish" (open substitute)
