@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32542478/README.md)
 # Studio Browne
 
 Interior design studio — Beverly Hills, CA.
