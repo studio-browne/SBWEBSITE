@@ -20,6 +20,8 @@ a{color:inherit;text-decoration:none;font:inherit}a:hover{color:var(--sb-terraco
 main image-slot{filter:var(--img-filter);transition:filter .5s ease}
 #sbHeroVideo,#sbHeroVideoB{transition:opacity 1.5s ease-in-out}
 body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip}
+.sb-btn{display:inline-block;font-family:var(--font-title);font-size:clamp(0.7rem,1.2vw,0.92rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 2.6rem;background:transparent;cursor:pointer;transition:background-color .45s cubic-bezier(.22,1,.36,1),color .45s cubic-bezier(.22,1,.36,1),border-color .45s cubic-bezier(.22,1,.36,1)}
+.sb-btn:hover,.sb-btn:focus-visible{background:var(--sb-terracotta);border-color:var(--sb-terracotta);color:var(--sb-porcelain)}
 @media (max-width:860px){.sb-split{grid-template-columns:1fr !important;min-height:0 !important}.sb-ba{grid-template-columns:1fr !important;gap:3rem !important}.sb-media{aspect-ratio:4 / 5}.sb-split>div:not(.sb-media){padding-top:clamp(3rem,9vw,4rem) !important;padding-bottom:clamp(3rem,9vw,4rem) !important}}
 @media (max-width:640px){body{--sb-photo-w:min(64vw,290px)}.sb-panel{padding-left:1.75rem !important;padding-right:1.75rem !important}.sb-sig{right:0 !important;bottom:-34px !important}.sb-split a{white-space:nowrap;letter-spacing:0.16em !important}}
 @media (prefers-reduced-motion:reduce){#sbHeroVideo,#sbHeroVideoB{transition:opacity 1.5s ease-in-out !important}}
@@ -56,7 +58,7 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <div style="position:relative;background:var(--sb-paper);padding:12px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
 <image-slot id="home-founder" src="assets/images/founder-headshot-home.webp" shape="rect" placeholder="Drop the founder photo" style="display:block;width:100%;aspect-ratio:1030 / 1286;box-shadow:var(--shadow-inset)"></image-slot>
 </div>
-<div aria-hidden="true" class="sb-sig" style="position:absolute;right:-16%;bottom:-40px;font-family:var(--font-hand);font-style:italic;font-weight:400;font-size:clamp(1.4rem,1.9vw,2.1rem);line-height:1;color:#1a1613;transform:rotate(-8deg);text-transform:none;letter-spacing:normal;white-space:nowrap;pointer-events:none;text-shadow:0.5px 0.5px 0 #1a1613">xx,&nbsp; Matt Browne</div>
+<div aria-hidden="true" class="sb-sig" style="position:absolute;right:-16%;bottom:-40px;font-family:var(--font-hand);font-weight:400;font-size:clamp(1.4rem,1.9vw,2.1rem);line-height:1;color:#1a1613;transform:rotate(-8deg);text-transform:none;letter-spacing:normal;white-space:nowrap;pointer-events:none;text-shadow:0.5px 0.5px 0 #1a1613">xx,&nbsp; Matt Browne</div>
 </div>
 </div>
 
@@ -78,7 +80,7 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="filbert.html">View Project</a></span>
 </div>
 <div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-filbert-hero" src="assets/images/filbert/proj-filbert-nook2.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+<image-slot id="home-filbert-hero" src="assets/images/filbert/proj-filbert-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
 </div>
 </section>
 
@@ -111,7 +113,7 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="jackson.html">View Project</a></span>
 </div>
 <div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-nobhill-hero" src="assets/images/jackson/jackson-vignette.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+<image-slot id="home-nobhill-hero" src="assets/images/jackson/jackson-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
 </div>
 </section>
 
@@ -131,11 +133,11 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 </div>
 </section>
 
-<section class="sb-panel" data-tone="ink" style="background:var(--panel-greige);min-height:60vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
-<span style="font-family:var(--font-title);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:400;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:0.2rem"><a href="work.html">View all projects</a></span>
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-greige);display:flex;align-items:center;justify-content:center;padding:clamp(3.5rem,7vw,5.5rem) clamp(5rem,10vw,10rem)">
+<a class="sb-btn" href="work.html">View all projects</a>
 </section>
 
-<section class="sb-panel" data-tone="ink" style="background:var(--panel-camel);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-camel);display:flex;align-items:center;justify-content:center;padding:clamp(4.5rem,8vw,6.5rem) clamp(5rem,10vw,10rem)">
 <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.6rem;max-width:520px">
 <img src="assets/logo-mark.png" alt="Studio Browne" style="height:72px;width:auto;opacity:0.9">
 <p style="font-family:var(--font-sans);font-size:0.88rem;line-height:1.6;color:var(--text-primary);margin:0.4rem 0 0;max-width:34ch">Rooted in warm, material-led design, Studio Browne creates considered homes for clients from Los Angeles to Hawaii.</p>
