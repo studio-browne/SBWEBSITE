@@ -7,7 +7,7 @@
 </head>
 <body>
 <x-dc>
-<!-- @template name="Robertson project detail" description="Studio Browne — Robertson project page, alternating photo/text rows with dedicated image slots" -->
+<!-- @template name="Robertson project detail" description="Studio Browne — Robertson project page, essay band + photo grid" -->
 <helmet>
 <link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
 <script src="image-slot.js"></script>
@@ -21,71 +21,45 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 .qfade{opacity:0;will-change:opacity,transform}
 .ws-plate image-slot{display:block}
 .ws-plate{position:relative}
-.hand{font-family:var(--font-quote);font-weight:400;font-size:clamp(1.5rem,3vw,2.7rem);line-height:1.4;letter-spacing:0.01em;margin:0;color:#2A2420}
-.hand-over{position:absolute;z-index:2;pointer-events:none;color:#F4EFE4;font-weight:500;text-shadow:0 2px 22px rgba(20,14,8,.75),0 0 6px rgba(20,14,8,.55),0 0 2px rgba(20,14,8,.45)}
-.hand-cross{position:absolute;z-index:3;pointer-events:none;left:17%;right:5%;bottom:-3.25rem}
-.hand-note{font-size:clamp(1rem,1.7vw,1.55rem);line-height:1.55;max-width:28ch;margin:clamp(1.6rem,2.8vw,2.4rem) 0 0}
-.hand-cross .hand{text-shadow:0 0 16px rgba(238,231,216,.92),0 0 34px rgba(238,231,216,.72),0 1px 3px rgba(238,231,216,.85)}
-@media (max-width:820px){.hand-cross{position:static;left:auto;right:auto;bottom:auto;padding:1.25rem 0 0}}
+.hand{font-family:var(--font-quote);font-weight:400;font-size:clamp(1.5rem,3vw,2.7rem);line-height:1.4;letter-spacing:0.01em;margin:0;color:var(--text-primary)}
+.ws-essay{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.ws-lead{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.3rem,2.3vw,1.95rem);line-height:1.3;letter-spacing:-0.01em;margin:0;color:var(--text-primary)}
+.ws-body{font-family:var(--font-sans);font-weight:300;font-size:0.95rem;line-height:1.8;color:var(--text-secondary);margin:0.3rem 0 0}
+.ws-details{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.8rem 2rem;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line);padding:1rem 0;font-family:var(--font-sans);font-size:0.84rem;letter-spacing:0.02em;color:var(--text-primary)}
+.ws-dk{display:inline-block;font-size:0.62rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-secondary);margin-right:0.7rem;vertical-align:0.08em}
+.ws-face{align-self:stretch;display:flex;align-items:center;padding:clamp(1rem,3vw,2.5rem) clamp(0.5rem,3vw,2.5rem)}
+.ws-face .hand{font-size:clamp(1.6rem,3.1vw,2.8rem);max-width:15ch;transform:rotate(-1.6deg);transform-origin:left top}
+.ws-cap{font-size:clamp(1.05rem,1.6vw,1.5rem);line-height:1.5;margin:clamp(0.9rem,1.6vw,1.3rem) 0 0;transform:rotate(-1.2deg);transform-origin:left top}
 .sb-cta:hover{color:var(--sb-porcelain) !important;opacity:0.88}
 .sb-btn{display:inline-block;font-family:var(--font-title);font-size:clamp(0.7rem,1.2vw,0.92rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 2.6rem;background:transparent;cursor:pointer;transition:background-color .45s cubic-bezier(.22,1,.36,1),color .45s cubic-bezier(.22,1,.36,1),border-color .45s cubic-bezier(.22,1,.36,1)}
 .sb-btn:hover,.sb-btn:focus-visible{background:var(--sb-terracotta);border-color:var(--sb-terracotta);color:var(--sb-porcelain)}
 .ws-plate{overflow:hidden;background:var(--surface-inset);border-radius:var(--radius-sm)}
 .ws-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.75rem,2vw,1.5rem);align-items:start;max-width:1200px;margin:0 auto;padding:clamp(0.75rem,2vw,1.5rem) clamp(1.5rem,5vw,4rem)}
 .ws-flip>*:first-child{grid-column:2;grid-row:1}.ws-flip>*:last-child{grid-column:1;grid-row:1}
-.ws-label{font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-camel);margin-bottom:1.3rem}
-.ws-note{border-top:1px solid var(--line-strong);padding-top:clamp(1.1rem,2vw,1.6rem)}
-.ws-note p{max-width:46ch}
-.ws-detail{display:flex;justify-content:space-between;padding:0.55rem 0;border-bottom:1px solid var(--line);font-family:var(--font-sans);font-size:0.82rem;letter-spacing:0.02em}
-@media (max-width:820px){.ws-row{grid-template-columns:1fr !important;gap:0.75rem !important;padding-top:0.75rem !important;padding-bottom:0.75rem !important}.ws-flip>*{grid-column:auto !important;grid-row:auto !important;order:0 !important}}
+.ws-band{max-width:1200px;margin:0 auto;padding:clamp(0.75rem,2vw,1.5rem) clamp(1.5rem,5vw,4rem)}
+@media (max-width:820px){.ws-essay{grid-template-columns:1fr;gap:1.4rem}.ws-face{padding:1.5rem 0 0.5rem}.ws-details{justify-content:flex-start;gap:0.7rem 1.6rem}.ws-row{grid-template-columns:1fr !important;gap:0.75rem !important;padding-top:0.75rem !important;padding-bottom:0.75rem !important}.ws-flip>*{grid-column:auto !important;grid-row:auto !important;order:0 !important}}
 </style>
 </helmet>
 <x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="ink" hide-bottom="{{ true }}" on-home="{{ goHome }}" on-right="{{ goWork }}" on-left="{{ goHome }}" mark-src="assets/logo-mark.png" hint-size="1px,1px"></x-import>
 <main class="ws" ref="{{ rootRef }}" data-screen-label="Robertson" style="width:100%;overflow-x:clip">
 <section style="text-align:center;padding:clamp(7rem,12vw,10rem) 1.5rem clamp(2rem,5vw,3rem)">
-<div class="fu" style="font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-terracotta);margin-bottom:1rem">Eyebrow goes here</div>
+<div class="fu" style="font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-terracotta);margin-bottom:1rem">In Progress</div>
 <h1 class="fu" style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.1rem,3vw,2.3rem);margin:0;line-height:1.02;text-transform:uppercase">Robertson</h1>
-<div class="fu" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-muted);margin-top:1rem">Beverly Hills, CA · 2025 · Conceptual Design</div>
+<div class="fu" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary);margin-top:1rem">Beverly Hills, CA · 2025 · Conceptual Design</div>
 </section>
-<section class="fu" style="max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)"><div class="ws-plate" style="aspect-ratio:4/3;width:100%"><image-slot id="proj-robertson-hero" src="assets/images/homepage/canon-hero.webp" shape="rect" placeholder="Robertson hero photo" style="width:100%;height:100%"></image-slot></div></section>
+<section class="fu ws-band" style="padding-top:0;padding-bottom:0"><div class="ws-plate" style="aspect-ratio:3/2;width:100%"><image-slot id="proj-robertson-hero" src="assets/images/robertson-hero-32.webp" shape="rect" placeholder="Drop the hero photo" style="width:100%;height:100%"></image-slot></div></section>
+<section class="fu ws-band" style="padding-top:clamp(2.6rem,5vw,4.2rem);padding-bottom:0">
+<div class="ws-essay">
+<p class="ws-lead">A Beverly Hills residence, currently in design.</p>
+<p class="ws-body">The full project story and photography will follow on completion.</p>
+</div>
+</section>
+<section class="fu ws-band" style="padding-top:clamp(2rem,4vw,3.2rem);padding-bottom:clamp(1.2rem,2.5vw,2rem)">
+<div class="ws-details"><span><span class="ws-dk">Location</span>Beverly Hills, CA</span><span><span class="ws-dk">Scope</span>Conceptual Design</span><span><span class="ws-dk">Status</span>In Progress</span><span><span class="ws-dk">Year</span>2025</span></div>
+</section>
 <div class="ws-row">
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g1" src="assets/images/homepage/canon-detail.webp" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-<div class="fu">
-<div class="ws-label">About the Project</div>
-<p style="font-family:var(--font-serif);font-weight:400;font-size:clamp(1.05rem,1.8vw,1.45rem);line-height:1.4;letter-spacing:-0.01em;margin:0;color:var(--text-muted)">Project description goes here.</p>
-<p style="font-family:var(--font-sans);font-weight:300;font-size:0.92rem;line-height:1.85;color:var(--text-muted);margin-top:1.4rem">Second paragraph goes here.</p>
-<p class="hand hand-note" style="transform:rotate(-1.2deg);transform-origin:left top">Handwritten note goes here.</p>
-<div style="margin-top:2.4rem">
-<div class="ws-label" style="margin-bottom:0.4rem">Details</div>
-<div class="ws-detail"><span style="color:var(--text-secondary)">Scope</span><span>Conceptual Design</span></div>
-<div class="ws-detail"><span style="color:var(--text-secondary)">Location</span><span>Beverly Hills, CA</span></div>
-<div class="ws-detail"><span style="color:var(--text-secondary)">Year</span><span>2025</span></div>
-<div class="ws-detail"><span style="color:var(--text-secondary)">Photography</span><span>Studio Browne</span></div>
-</div>
-</div>
-</div>
-<div class="ws-row">
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g2" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g3" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-</div>
-<section class="fu" style="max-width:1200px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3rem)">
-<p class="hand" style="transform:rotate(-1.6deg);transform-origin:left top;margin:0 0 0 13%">Pull quote goes here.</p></section>
-<section class="fu" style="max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)"><div class="ws-plate" style="aspect-ratio:4/3;width:100%"><image-slot id="proj-robertson-land1" shape="rect" placeholder="Drop a landscape photo" style="width:100%;height:100%"></image-slot></div></section>
-<div class="ws-row">
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g4" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g5" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-</div>
-<div class="ws-row ws-flip">
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g6" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-<div class="fu ws-note">
-<div class="ws-label">Materials</div>
-<p style="font-family:var(--font-serif);font-weight:400;font-size:clamp(1.05rem,1.8vw,1.45rem);line-height:1.4;letter-spacing:-0.01em;margin:0">Materials lead goes here.</p>
-<p style="font-family:var(--font-sans);font-weight:300;font-size:0.92rem;line-height:1.85;color:var(--text-secondary);margin-top:1.4rem">Materials note goes here.</p>
-</div>
-</div>
-<div class="ws-row">
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g7" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
-<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g8" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
+<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g1" src="assets/images/homepage/canon-hero.webp" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
+<div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g2" src="assets/images/homepage/canon-detail.webp" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
 </div>
 <section style="text-align:center;padding:clamp(3rem,6vw,5rem) 1.5rem">
 <a class="fu sb-btn" href="work.html">View all projects</a>
@@ -131,7 +105,7 @@ class Component extends DCLogic {
       const o=this._fu[i], r=o.el.getBoundingClientRect();
       if(r.bottom<-240||r.top>vh+420) continue;
       let t=(vh*0.94-r.top)/(vh*0.34); t=t<0?0:(t>1?1:t);
-      if(_atEnd&&r.top<vh&&r.bottom>0) t=1;  // page can scroll no further: finish the reveal
+      if(_atEnd&&r.top<vh&&r.bottom>0) t=1;
       o.t=t; o.c+=(o.t-o.c)*LAG;
       if(Math.abs(o.t-o.c)<0.0015) o.c=o.t;
       o.el.style.opacity=o.c.toFixed(3);
@@ -142,6 +116,7 @@ class Component extends DCLogic {
       if(r.bottom<-240||r.top>vh+420) continue;
       const c=r.top+r.height/2, d=Math.abs(c-vh/2);
       let t=1-d/(vh*0.5); t=t<0?0:(t>1?1:t);
+      if(_atEnd&&r.top<vh&&r.bottom>0) t=1;
       o.t=t; o.c+=(o.t-o.c)*QLAG;
       o.el.style.opacity=o.c.toFixed(3);
       o.el.style.transform='translate3d(0,'+((1-o.c)*22).toFixed(1)+'px,0)';

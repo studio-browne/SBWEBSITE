@@ -1740,7 +1740,7 @@ function SBContactPanel({
       margin: "0.4rem 0 0",
       maxWidth: "34ch"
     }
-  }, "Rooted in warm, material-led design, Studio Browne creates considered homes for clients from Los Angeles to Hawaii."), /*#__PURE__*/React.createElement("div", {
+  }, "Rooted in warm materiality, Studio Browne reimagines homes for clients across the map."), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: "var(--font-sans)",
       fontSize: "0.8rem",
