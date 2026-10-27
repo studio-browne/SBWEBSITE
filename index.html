@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <script src="support.js"></script>
-</head>
-<body>
 <x-dc>
 <!-- @template name="Homepage" description="Studio Browne home — hero clip, editable statement panels, project splits, contact" -->
 <helmet>
@@ -23,8 +17,32 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 .sb-btn{display:inline-block;font-family:var(--font-title);font-size:clamp(0.7rem,1.2vw,0.92rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 2.6rem;background:transparent;cursor:pointer;transition:background-color .45s cubic-bezier(.22,1,.36,1),color .45s cubic-bezier(.22,1,.36,1),border-color .45s cubic-bezier(.22,1,.36,1)}
 .sb-btn:hover,.sb-btn:focus-visible{background:var(--sb-terracotta);border-color:var(--sb-terracotta);color:var(--sb-porcelain)}
 @media (max-width:860px){.sb-split{grid-template-columns:1fr !important;min-height:0 !important}.sb-ba{grid-template-columns:1fr !important;gap:3rem !important}.sb-media{aspect-ratio:4 / 5}.sb-split>div:not(.sb-media){padding-top:clamp(3rem,9vw,4rem) !important;padding-bottom:clamp(3rem,9vw,4rem) !important}}
-@media (max-width:640px){body{--sb-photo-w:min(64vw,290px)}.sb-panel{padding-left:1.75rem !important;padding-right:1.75rem !important}.sb-sig{right:0 !important;bottom:-34px !important}.sb-split a{white-space:nowrap;letter-spacing:0.16em !important}}
+@media (max-width:640px){body{--sb-photo-w:min(64vw,290px)}.sb-panel{padding-left:1.75rem !important;padding-right:1.75rem !important}.sb-sig{right:-6% !important;width:132px !important}.sb-split a{white-space:nowrap;letter-spacing:0.16em !important}}
 @media (prefers-reduced-motion:reduce){#sbHeroVideo,#sbHeroVideoB{transition:opacity 1.5s ease-in-out !important}}
+/* ---- Phone layout: one photo + one caption per project, same order every time ---- */
+@media (max-width:760px){
+.sb-split{display:grid !important;grid-template-columns:1fr !important;gap:0 !important;min-height:0 !important;padding:0 0 clamp(2.4rem,9vw,3.4rem) !important;background:transparent !important}
+.sb-split .sb-media{order:-1;aspect-ratio:4/5 !important;cursor:pointer}
+.sb-split>div:not(.sb-media){display:grid !important;grid-template-columns:1fr auto;align-items:start;gap:0 1rem !important;padding:0.9rem 0 0 !important;margin:0.85rem 0 0 !important;background:transparent !important;text-align:left !important;border-top:1px solid var(--line-strong);justify-content:stretch !important}
+.sb-split>div:not(.sb-media)>div:first-child{display:flex !important;flex-direction:column !important;align-items:flex-start !important;gap:0.4rem !important}
+.sb-split>div:not(.sb-media) h3{font-size:1.15rem !important;letter-spacing:0.06em !important;line-height:1.1 !important}
+.sb-split>div:not(.sb-media)>div:first-child>div{font-size:0.58rem !important;letter-spacing:0.2em !important;color:var(--text-muted) !important}
+.sb-split>div:not(.sb-media)>div:nth-child(2){display:none !important}
+.sb-split>div:not(.sb-media)>span{grid-column:2;grid-row:1;align-self:start;border:0 !important;padding:0.15rem 0 0 !important;font-size:0.6rem !important;letter-spacing:0.2em !important;white-space:nowrap}
+.sb-split>div:not(.sb-media)>span a::after{content:" \2192"}
+.sb-panel p{letter-spacing:0.03em !important;line-height:1.6 !important}
+.sb-panel{background:transparent !important}
+.sb-recent{display:block !important;font-family:var(--font-title);font-weight:500;font-size:1.15rem;letter-spacing:0.06em;line-height:1.1;text-transform:uppercase;color:var(--text-primary);text-align:left;padding:0 0 1.1rem}
+main>section.sb-panel:nth-of-type(3)>div{display:none !important}
+main>section.sb-panel:nth-of-type(3){padding-bottom:0 !important;min-height:0 !important}
+main>section.sb-panel:has(.sb-btn){padding-top:1.1rem !important;padding-bottom:3.5rem !important}
+main>section:last-child{padding-top:clamp(3rem,10vw,4.5rem) !important;padding-bottom:clamp(3rem,10vw,4.5rem) !important;min-height:0 !important}
+main>section:last-child input{border-bottom-color:var(--line-strong) !important}
+}
+@media (max-width:720px){
+main>section[data-screen-label="Hero"]{margin-left:calc(var(--sb-rail) * -1);margin-right:calc(var(--sb-rail) * -1)}
+}
+
 </style>
 </helmet>
 
@@ -48,7 +66,7 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <section class="sb-panel" data-tone="ink" style="background:var(--panel-greige);min-height:38vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(4rem,6vw,5.5rem) clamp(5rem,10vw,10rem) calc(var(--sb-photo-w) * 0.625 + 3.5rem);position:relative">
 <div style="max-width:40ch;text-align:center">
 <div style="font-family:var(--font-sans);font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-primary);margin-bottom:1.8rem">Studio Browne</div>
-<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.85rem,1.4vw,1.15rem);line-height:1.5;letter-spacing:0.005em;color:var(--text-primary);margin:0">A full-service interior design practice working in warm, material-led modernism — plaster, walnut, stone and light — for clients from Los Angeles to Hawaii.</p>
+<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.85rem,1.4vw,1.15rem);line-height:1.5;letter-spacing:0.005em;color:var(--text-primary);margin:0">Full-service interior design. Warm, modern homes made from natural materials and real craftsmanship, tailored to how you live.</p>
 </div>
 </section>
 
@@ -57,37 +75,15 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <div style="position:relative;background:var(--sb-paper);padding:12px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
 <image-slot id="home-founder" src="assets/images/founder-headshot-home.webp" shape="rect" placeholder="Drop the founder photo" style="display:block;width:100%;aspect-ratio:1030 / 1286;box-shadow:var(--shadow-inset)"></image-slot>
 </div>
-<div aria-hidden="true" class="sb-sig" style="position:absolute;right:-16%;bottom:-40px;font-family:var(--font-hand);font-weight:400;font-size:clamp(1.4rem,1.9vw,2.1rem);line-height:1;color:#1a1613;transform:rotate(-8deg);text-transform:none;letter-spacing:normal;white-space:nowrap;pointer-events:none;text-shadow:0.5px 0.5px 0 #1a1613">xx,&nbsp; Matt Browne</div>
+<img class="sb-sig" src="assets/images/signature.png" alt="" aria-hidden="true" style="position:absolute;right:-20%;top:calc(100% + 4px);width:clamp(150px,12.5vw,220px);height:auto;transform:rotate(-4deg);transform-origin:right top;pointer-events:none">
 </div>
 </div>
 
-<section class="sb-panel" data-tone="ink" style="background:var(--panel-stone);min-height:38vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--sb-photo-w) * 0.625 + 5rem) clamp(5rem,10vw,10rem) clamp(4rem,6vw,5.5rem);position:relative">
-<div style="max-width:40ch;text-align:center">
-<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.85rem,1.4vw,1.15rem);line-height:1.5;letter-spacing:0.005em;color:var(--text-primary);margin:0">We create timeless homes that imbue warmth and feeling, personally tailored to how our clients live. Known for a refined, contemporary aesthetic that blends craftsmanship, natural materials and a feeling of laid-back luxury.</p>
-</div>
+<section class="sb-panel" data-tone="ink" style="background:var(--panel-stone);min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--sb-photo-w) * 0.625 + 7rem) clamp(5rem,10vw,10rem) clamp(3.5rem,5vw,5rem);position:relative">
 </section>
 
-<section data-screen-label="Filbert" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:62.5vw">
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
-<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Filbert</h3>
-<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Russian Hill, SF &nbsp;·&nbsp; 2018</div>
-</div>
-<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
-<image-slot id="home-filbert-detail" src="assets/images/filbert/proj-canon-g1.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
-</div>
-<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="filbert.html">View Project</a></span>
-</div>
-<div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-filbert-hero" src="assets/images/filbert/proj-filbert-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
-</div>
-</section>
-
-
+<div class="sb-recent" aria-hidden="true" style="display:none">Recent Work</div>
 <section data-screen-label="Vallejo" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:62.5vw">
-<div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-broadway-hero" src="assets/images/homepage/broadway-hero.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
-</div>
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
 <h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Vallejo</h3>
@@ -98,9 +94,15 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 </div>
 <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="vallejo.html">View Project</a></span>
 </div>
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-broadway-hero" src="assets/images/homepage/broadway-hero.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
 </section>
 
 <section data-screen-label="Jackson" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:62.5vw">
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-nobhill-hero" src="assets/images/jackson/jackson-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
 <h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Jackson</h3>
@@ -111,15 +113,9 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 </div>
 <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="jackson.html">View Project</a></span>
 </div>
-<div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-nobhill-hero" src="assets/images/jackson/jackson-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
-</div>
 </section>
 
 <section data-screen-label="Broadway" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:62.5vw">
-<div class="sb-media" style="position:relative;overflow:hidden">
-<image-slot id="home-broadway2-hero" src="assets/images/broadway/broadway-arms.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
-</div>
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
 <h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Broadway</h3>
@@ -129,6 +125,25 @@ body{--sb-photo-w:clamp(312px,22.8vw,456px);overflow-x:clip}main{overflow-x:clip
 <image-slot id="home-broadway2-detail" src="assets/images/broadway/broadway-facade.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
 </div>
 <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="broadway.html">View Project</a></span>
+</div>
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-broadway2-hero" src="assets/images/broadway/broadway-arms.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+</section>
+
+<section data-screen-label="Filbert" class="sb-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:62.5vw">
+<div class="sb-media" style="position:relative;overflow:hidden">
+<image-slot id="home-filbert-hero" src="assets/images/filbert/proj-filbert-home.webp" shape="rect" placeholder="Drop a project photo" style="position:absolute;inset:0"></image-slot>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:clamp(2rem,5vw,4rem);background:var(--panel-greige);text-align:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.9rem">
+<h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:0.04em;margin:0;color:var(--text-primary)">Filbert</h3>
+<div style="font-family:var(--font-sans);font-size:0.68rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary)">Russian Hill, SF &nbsp;·&nbsp; 2018</div>
+</div>
+<div style="background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)">
+<image-slot id="home-filbert-detail" src="assets/images/filbert/proj-canon-g1.webp" shape="rect" placeholder="Drop a detail photo" style="display:block;width:clamp(260px,24vw,440px);aspect-ratio:4 / 5;box-shadow:var(--shadow-inset)"></image-slot>
+</div>
+<span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-primary);border-bottom:1px solid var(--line-strong);padding-bottom:4px"><a href="filbert.html">View Project</a></span>
 </div>
 </section>
 
@@ -217,12 +232,22 @@ class Component extends DCLogic {
     document.documentElement.style.setProperty("--sb-corner-ease", "2.4s");
     window.addEventListener("scroll", this._onScroll, { passive: true });
     this._onScroll();
+    // Phones: the photo is the card, so a tap on it opens the project.
+    this._onTap = (e) => {
+      if (!window.matchMedia("(max-width:760px)").matches) return;
+      const media = e.target.closest && e.target.closest(".sb-media");
+      if (!media) return;
+      const a = media.parentElement && media.parentElement.querySelector("a[href]");
+      if (a) window.location.href = a.getAttribute("href");
+    };
+    document.addEventListener("click", this._onTap);
   }
   componentWillUnmount() {
     clearTimeout(this._boot);
     clearInterval(this._toneTimer);
     (this._timers || []).forEach(clearTimeout);
     window.removeEventListener("scroll", this._onScroll);
+    document.removeEventListener("click", this._onTap);
     document.documentElement.style.removeProperty("--sb-corner-ink");
     document.documentElement.style.removeProperty("--sb-corner-ease");
   }
@@ -348,5 +373,4 @@ class Component extends DCLogic {
   }
 }
 </script>
-</body>
-</html>
+</body></html>

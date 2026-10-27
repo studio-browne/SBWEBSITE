@@ -33,8 +33,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
   .sb-pgrid:hover .sb-pcap p{opacity:1}}
 
 @media (max-width:720px){
-  .sb-pgrid .sb-pcap{position:static !important;transform:none !important;width:auto !important;
-    aspect-ratio:auto !important;grid-column:1 / -1;order:-1;padding:1.4rem 1.1rem}
+  .sb-pgrid .sb-pcap{position:static !important;transform:none !important;width:58% !important;grid-column:1 / -1;order:-1;justify-self:center;margin:0 0 clamp(0.75rem,3vw,1.25rem);padding:8px !important}
   .sb-pgrid .sb-pcap p{position:static !important;transform:none !important}
 }
 @media (prefers-reduced-motion:reduce){.sb-pgrid .sb-plate,.sb-pcap p{transition:none}
@@ -54,15 +53,17 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 </div>
 <div aria-hidden="true" style="position:absolute;left:0;right:0;top:calc(100% - min(30svh,42vw));height:min(30svh,42vw);z-index:2;pointer-events:none;background-image:url(assets/images/studio/organza-veil.webp);background-size:cover;background-position:center 18%;background-repeat:no-repeat;opacity:var(--sb-veil,0.08);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,1) 30%,rgba(0,0,0,0.85) 62%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,1) 30%,rgba(0,0,0,0.85) 62%,rgba(0,0,0,0) 100%)"></div>
 </div>
-<section aria-label="Studio pictures" style="position:relative;z-index:3;width:100%;padding:clamp(2.5rem,7vw,6rem) clamp(1.25rem,5vw,4.5rem) clamp(1.5rem,4vw,3rem)">
+<section class="sb-pad-x" aria-label="Studio statement" style="position:relative;z-index:3;padding:clamp(3rem,7vw,6rem) clamp(1.25rem,5vw,4.5rem) 0">
+<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);max-width:1100px;text-wrap:pretty;margin:0 auto">I created Studio Browne to create spaces that have something to say. I am drawn to the overlooked and am a fan of the bridge between high-end modernism and the lived-in look of the past. I am bored with the repeated palettes, the safe beige consensus, the same ten ideas passed around by a stale industry. I didn&rsquo;t start a studio to join that conversation. Every project, from heritage restorations to ground-up architectural builds, is treated as a cohesive narrative. I approach my work looking at the total picture; there needs to be a cohesive narrative. It isn&rsquo;t about filling rooms; it is about tuning them. Material honesty and spatial harmony, and get rid of everything that&rsquo;s only there because it&rsquo;s expected. My inspiration comes in many forms &mdash; the rhythm of a song, the prose of a favorite book, the raw texture of unlacquered brass. Many forms, but never from a catalog, a trend report, or somebody else&rsquo;s mood board. The work I do is curated, deeply personal, and a little defiant.</p>
+<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);max-width:1100px;text-wrap:pretty;margin:2.2em auto 0">Let&rsquo;s live,<br>Matt</p>
+</section>
+<section aria-label="Studio pictures" style="position:relative;z-index:3;width:100%;padding:clamp(2.5rem,5vw,4rem) clamp(1.25rem,5vw,4.5rem) clamp(1.5rem,4vw,3rem)">
 <div class="sb-pgrid" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.5rem,1.4vw,1.1rem);max-width:1100px;margin:0 auto">
 <img class="sb-plate sb-p1" src="assets/images/studio/studio-02.webp" alt="Candlesticks on a marble mantel against walnut panelling" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
 <img class="sb-plate sb-p2" src="assets/images/studio/studio-01.webp" alt="Hand holding an oak sample over stone and tile finishes" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
 <img class="sb-plate sb-p3" src="assets/images/studio/studio-03.webp" alt="Art books and a plaster bust on a painted built-in" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
 <img class="sb-plate sb-p4" src="assets/images/studio/studio-06.webp" alt="Sheer curtain and afternoon light across a corner chair" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
-<div class="sb-pcap" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(27.6%,258px);aspect-ratio:1/1;background:var(--panel-greige)">
-<p style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0;padding:0 clamp(0.6rem,1.2vw,1rem);font-family:var(--font-manofa);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:1.6;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);text-align:center;text-wrap:pretty">Studio Browne is led by Matt Browne — interior designer &amp; digital artist — pairing hands-on craft with a photographer's eye and an early command of AI-assisted photorealistic rendering.</p>
-</div>
+<div class="sb-pcap" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(25%,236px);background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)"><img src="assets/images/founder-headshot-home.webp" alt="Matt Browne, principal of Studio Browne" style="display:block;width:100%;aspect-ratio:1030/1286;object-fit:cover"></div>
 </div>
 </section>
 <x-import component-from-global-scope="SBStudio" on-navigate="{{ onNavigate }}" hint-size="100%,100vh"></x-import>
