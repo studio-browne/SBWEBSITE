@@ -2969,9 +2969,7 @@ function SBStudio({
   } = window.StudioBrowneDesignSystem_6dac50;
   const exp = [["Studio Browne", "Principal · Beverly Hills", "2026—Present"], ["Sarah West Interiors", "Designer III · West Hollywood", "2022—Present"], ["Alexander Design Build", "Interior Designer · Los Angeles", "2022"], ["Adair Design Group", "Interior Designer · San Francisco", "2014—2018"]];
   const skills = ["AI for Design", "Residential & Commercial", "Custom Millwork", "2D & 3D Modeling", "Photorealistic Rendering", "Space Planning", "Feng Shui", "Art Direction & Styling", "Lighting Design & FF&E", "Color Application"];
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.SBContactPanel, {
-    onNavigate: onNavigate
-  }));
+  return /*#__PURE__*/React.createElement("div", null);
 }
 Object.assign(window, {
   SBStudio

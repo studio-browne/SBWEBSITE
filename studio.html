@@ -26,7 +26,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 .sb-pgrid .sb-p2:hover{transform:scale(1.038) translate(1.2%,-1.2%)}
 .sb-pgrid .sb-p3:hover{transform:scale(1.038) translate(-1.2%,1.2%)}
 .sb-pgrid .sb-p4:hover{transform:scale(1.038) translate(1.2%,1.2%)}
-.sb-pcap{z-index:2}
+.sb-pcap{z-index:6}
 .sb-pcap p{transition:opacity .7s var(--ease-soft)}
 .sb-pgrid:hover .sb-pcap p{opacity:.22}
 @media (hover:none){.sb-pgrid:hover .sb-plate{filter:none;transform:none}
@@ -40,7 +40,8 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
   .sb-pgrid:hover .sb-plate,.sb-pgrid .sb-plate:hover{filter:none;transform:none;box-shadow:none}
   .sb-pgrid:hover .sb-pcap p{opacity:1}}
 
-@media (max-width:760px){main section[style*="panel-camel"]{background:transparent !important;min-height:0 !important;padding:3.5rem 0 3.5rem !important}main section[style*="panel-camel"] input{border-bottom-color:var(--line-strong) !important}}
+@media (max-width:760px){main section[style*="panel-camel"]{background:transparent !important;min-height:0 !important;padding:1rem 0 3.5rem !important}main section[style*="panel-camel"] .ft-sep{display:block;height:0;overflow:hidden}}
+.sb-cta:hover{color:var(--sb-porcelain) !important;opacity:0.88}
 </style>
 </helmet>
 
@@ -55,7 +56,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 </div>
 <section class="sb-pad-x" aria-label="Studio statement" style="position:relative;z-index:3;padding:clamp(3rem,7vw,6rem) clamp(1.25rem,5vw,4.5rem) 0">
 <p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);max-width:1100px;text-wrap:pretty;margin:0 auto">I created Studio Browne to create spaces that have something to say. I am drawn to the overlooked and am a fan of the bridge between high-end modernism and the lived-in look of the past. I am bored with the repeated palettes, the safe beige consensus, the same ten ideas passed around by a stale industry. I didn&rsquo;t start a studio to join that conversation. Every project, from heritage restorations to ground-up architectural builds, is treated as a cohesive narrative. I approach my work looking at the total picture; there needs to be a cohesive narrative. It isn&rsquo;t about filling rooms; it is about tuning them. Material honesty and spatial harmony, and get rid of everything that&rsquo;s only there because it&rsquo;s expected. My inspiration comes in many forms &mdash; the rhythm of a song, the prose of a favorite book, the raw texture of unlacquered brass. Many forms, but never from a catalog, a trend report, or somebody else&rsquo;s mood board. The work I do is curated, deeply personal, and a little defiant.</p>
-<p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);max-width:1100px;text-wrap:pretty;margin:2.2em auto 0">Let&rsquo;s live,<br>Matt</p>
+<div style="max-width:1100px;margin:2.2em auto 0"><p style="font-family:var(--font-sans);font-weight:400;font-size:clamp(0.72rem,0.95vw,0.88rem);line-height:2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);max-width:1100px;text-wrap:pretty;margin:0">Let&rsquo;s live,</p><img src="assets/images/signature.png" alt="Matt Browne" style="display:block;width:clamp(140px,12vw,200px);height:auto;margin:0.5rem 0 0 -0.4rem;transform:rotate(-4deg);transform-origin:left top"></div>
 </section>
 <section aria-label="Studio pictures" style="position:relative;z-index:3;width:100%;padding:clamp(2.5rem,5vw,4rem) clamp(1.25rem,5vw,4.5rem) clamp(1.5rem,4vw,3rem)">
 <div class="sb-pgrid" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.5rem,1.4vw,1.1rem);max-width:1100px;margin:0 auto">
@@ -67,6 +68,14 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 </div>
 </section>
 <x-import component-from-global-scope="SBStudio" on-navigate="{{ onNavigate }}" hint-size="100%,100vh"></x-import>
+<section style="background:var(--panel-camel);min-height:80vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4rem;max-width:520px">
+<img src="assets/logo-mark.png" alt="Studio Browne" style="height:64px;width:auto;opacity:0.9">
+<p style="font-family:var(--font-title);font-size:1.25rem;line-height:1.5;color:var(--text-primary);margin:0.3rem 0 0;max-width:24ch">Let's live.</p>
+<div style="font-family:var(--font-sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-primary);line-height:2.1">Studio Browne<span class="ft-sep"> · </span>Beverly Hills, CA<br><a href="mailto:matt@studio-browne.com">matt@studio-browne.com</a><span class="ft-sep"> · </span><a href="tel:+13104862867">310.486.2867</a></div>
+<a href="contact.html" class="sb-cta" style="margin-top:0.6rem;display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;background:var(--sb-ink);color:var(--sb-porcelain);font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;border-radius:999px">Book a consultation <span aria-hidden="true">→</span></a>
+</div>
+</section>
 </main>
 
 <template id="__bundler_thumbnail"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#CDC0A7"/><circle cx="200" cy="180" r="66" fill="#594C40"/><text x="200" y="330" font-family="Georgia, serif" font-size="26" letter-spacing="5" fill="#413F3E" text-anchor="middle">STUDIO</text></svg></template></x-dc>
