@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vallejo — Albert Farr House, Pacific Heights | Studio Browne</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="An Albert L. Farr house in Pacific Heights, restored by Studio Browne: pale oak, plaster, walnut and stone, and an open stair with a cascading pendant.">
+<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/vallejo.html">
+<meta property="og:site_name" content="Studio Browne">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vallejo — Albert Farr House, Pacific Heights | Studio Browne">
+<meta property="og:description" content="An Albert L. Farr house in Pacific Heights, restored by Studio Browne: pale oak, plaster, walnut and stone, and an open stair with a cascading pendant.">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/vallejo/proj-vallejo-hero.webp">
+<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/vallejo.html">
+<meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
 <body>
@@ -51,8 +65,8 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 <section class="fu ws-band" style="padding-top:0;padding-bottom:0"><div class="ws-plate" style="aspect-ratio:3/2;width:100%"><image-slot id="proj-vallejo-hero" src="assets/images/vallejo/proj-vallejo-hero.webp" shape="rect" placeholder="Drop the hero photo" style="width:100%;height:100%"></image-slot></div></section>
 <section class="fu ws-band" style="padding-top:clamp(2.6rem,5vw,4.2rem);padding-bottom:0">
 <div class="ws-essay">
-<p class="ws-lead">Albert L. Farr&rsquo;s most famous house burned down before anyone ever slept in it. This is one of the ones that&nbsp;lasted.</p>
-<div><p class="ws-body">Farr grew up in Yokohama, where his father helped build Japan&rsquo;s modern postal system, and came back to California at nineteen. He drew shingled houses for San Francisco&rsquo;s new hillside neighborhoods, lost his downtown office in the 1906 earthquake, and a few years later designed Wolf House for Jack and Charmian London. It burned in 1913, just before they were due to move in. London never rebuilt.</p><p class="ws-body" style="margin-top:1.1em">This house was luckier. It went up on the hill in the first years of the century, rode out 1906 while the city to the east burned, and spent the next hundred-plus years doing what Farr built it to do: catching light off the Bay and holding the Golden Gate in its windows. By the time we met it, Farr&rsquo;s house was still in there. It was just buried under a century of everybody else&rsquo;s ideas.</p><p class="ws-body" style="margin-top:1.1em">So we kept his proportions and cleared the rest. Pale oak underfoot. Soft plaster on the walls. Walnut and stone at the hearth. A butler&rsquo;s pantry in cream millwork.</p><p class="ws-body" style="margin-top:1.1em">Every floor turns around one open stair, and that&rsquo;s where the house keeps its heart now. A cascading pendant that began as a sketch drops straight through the stairwell, catching light the whole way down. Stand at the bottom and look up. That&rsquo;s the moment.</p><p class="ws-body" style="margin-top:1.1em">Farr&rsquo;s dream house never got its first night. This one has had more than forty thousand of them, and it&rsquo;s just getting&nbsp;started.</p></div>
+<p class="ws-lead">Albert L. Farr designed Jack London&rsquo;s Wolf House. It burned in 1913, before the Londons ever moved in. This one is still&nbsp;standing.</p>
+<div><p class="ws-body">Farr grew up in Yokohama and went on to design shingled houses across San Francisco. This one sits high in Pacific Heights with the Bay and the Golden Gate in its windows.</p><p class="ws-body" style="margin-top:1.1em">We kept his proportions and cleared the rest: pale oak floors, plaster walls, walnut and stone at the hearth. The drama lives in the open stair, where a cascading pendant that began as a sketch drops all the way through. Stand at the bottom and look&nbsp;up.</p></div>
 </div>
 </section>
 <section class="fu ws-band" style="padding-top:clamp(2rem,4vw,3.2rem);padding-bottom:clamp(1.2rem,2.5vw,2rem)">
@@ -101,7 +115,7 @@ class Component extends DCLogic {
     const atmo={"Cream":{"--sb-paper":"#E7DECB","--surface-inset":"#D3C6AC"},"Warm sand":{"--sb-paper":"#DCD0B8","--surface-inset":"#C6B99F"},"Dusk clay":{"--sb-paper":"#CBBCA0","--surface-inset":"#AD997D"}}[p.atmosphere||"Warm sand"]||{};
     const vars={"--img-filter":filter,...atmo}; for(const k in vars) root.style.setProperty(k,vars[k]);
   }
-  componentDidMount(){ this.apply(); document.title="Vallejo — Studio Browne"; const root=this._root; if(!root) return;
+  componentDidMount(){ this.apply(); const root=this._root; if(!root) return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     this._fu=[...root.querySelectorAll('.fu')].map(el=>({el,c:0,t:0}));
     this._q=[...root.querySelectorAll('.qfade')].map(el=>({el,c:0,t:0}));

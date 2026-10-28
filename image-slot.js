@@ -1133,7 +1133,9 @@
       this._ring.style.display = mask ? 'none' : '';
 
       // Controls and reframe entry gate on this so share links stay read-only.
-      const editable = !!(window.omelette && window.omelette.writeFile);
+      // Live site: photos are never editable in the browser (no reframe/zoom, no drag),
+      // so taps and pinches always reach the page. Swap photos in the HTML instead.
+      const editable = false;
       this.toggleAttribute('data-editable', editable);
       this._sub.style.display = editable ? '' : 'none';
 

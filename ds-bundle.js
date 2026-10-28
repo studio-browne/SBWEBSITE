@@ -1843,7 +1843,7 @@ function SBContact() {
       margin: "0 0 0.8rem",
       color: "var(--text-primary)"
     }
-  }, "Let's begin your home."), /*#__PURE__*/React.createElement("p", {
+  }, "Tell us all about it."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: "var(--font-sans)",
       fontSize: "0.9rem",
@@ -1852,7 +1852,7 @@ function SBContact() {
       margin: "0 auto 2.6rem",
       maxWidth: "44ch"
     }
-  }, "Tell us a little about your project. We take on a small number of full-service commissions each year."), sent ? /*#__PURE__*/React.createElement("div", {
+  }, "We take on a reserved number of commissions, some big and some small, but none are overlooked."), sent ? /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: "var(--font-serif)",
       fontSize: "1.2rem",
@@ -2860,7 +2860,7 @@ function SBProject({
       color: "var(--text-secondary)",
       marginTop: "1.6rem"
     }
-  }, "The brief was restraint. We stripped the plan to its light and circulation, then rebuilt in a short palette of honest materials \u2014 limewash, solid walnut, unlacquered brass and stone underfoot \u2014 so that nothing competes and everything ages well."))), /*#__PURE__*/React.createElement("section", {
+  }, "The brief was restraint. We stripped the plan to its light and circulation, then rebuilt in a short palette of honest materials \u2014 limewash, solid walnut, unlacquered brass and stone floors \u2014 so that nothing competes and everything ages well."))), /*#__PURE__*/React.createElement("section", {
     "data-tone": "ink",
     style: {
       display: "grid",
@@ -4218,7 +4218,7 @@ try { (() => {
       this._ring.style.display = mask ? 'none' : '';
 
       // Controls and reframe entry gate on this so share links stay read-only.
-      const editable = !!(window.omelette && window.omelette.writeFile);
+      const editable = false; // live site: photos never editable in the browser
       this.toggleAttribute('data-editable', editable);
       this._sub.style.display = editable ? '' : 'none';
 

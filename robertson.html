@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robertson — In Progress, Beverly Hills | Studio Browne</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="A Beverly Hills residence, currently in design with Studio Browne.">
+<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/robertson.html">
+<meta property="og:site_name" content="Studio Browne">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robertson — In Progress, Beverly Hills | Studio Browne">
+<meta property="og:description" content="A Beverly Hills residence, currently in design with Studio Browne.">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/robertson-hero-32.webp">
+<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/robertson.html">
+<meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
 <body>
@@ -46,7 +60,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 <section style="text-align:center;padding:clamp(7rem,12vw,10rem) 1.5rem clamp(2rem,5vw,3rem)">
 <div class="fu" style="font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-terracotta);margin-bottom:1rem">In Progress</div>
 <h1 class="fu" style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.1rem,3vw,2.3rem);margin:0;line-height:1.02;text-transform:uppercase">Robertson</h1>
-<div class="fu" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary);margin-top:1rem">Beverly Hills, CA · 2025 · Conceptual Design</div>
+<div class="fu" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary);margin-top:1rem">Beverly Hills, CA · Conceptual Design</div>
 </section>
 <section class="fu ws-band" style="padding-top:0;padding-bottom:0"><div class="ws-plate" style="aspect-ratio:3/2;width:100%"><image-slot id="proj-robertson-hero" src="assets/images/robertson-hero-32.webp" shape="rect" placeholder="Drop the hero photo" style="width:100%;height:100%"></image-slot></div></section>
 <section class="fu ws-band" style="padding-top:clamp(2.6rem,5vw,4.2rem);padding-bottom:0">
@@ -56,7 +70,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 </div>
 </section>
 <section class="fu ws-band" style="padding-top:clamp(2rem,4vw,3.2rem);padding-bottom:clamp(1.2rem,2.5vw,2rem)">
-<div class="ws-details"><span><span class="ws-dk">Location</span>Beverly Hills, CA</span><span><span class="ws-dk">Scope</span>Conceptual Design</span><span><span class="ws-dk">Status</span>In Progress</span><span><span class="ws-dk">Year</span>2025</span></div>
+<div class="ws-details"><span><span class="ws-dk">Location</span>Beverly Hills, CA</span><span><span class="ws-dk">Scope</span>Conceptual Design</span><span><span class="ws-dk">Status</span>In Progress</span></div>
 </section>
 <div class="ws-row">
 <div class="ws-plate fu" style="aspect-ratio:4/5"><image-slot id="proj-robertson-g1" src="assets/images/homepage/canon-hero.webp" shape="rect" placeholder="Drop a photo" style="width:100%;height:100%"></image-slot></div>
@@ -84,7 +98,7 @@ class Component extends DCLogic {
     const atmo={"Cream":{"--sb-paper":"#E7DECB","--surface-inset":"#D3C6AC"},"Warm sand":{"--sb-paper":"#DCD0B8","--surface-inset":"#C6B99F"},"Dusk clay":{"--sb-paper":"#CBBCA0","--surface-inset":"#AD997D"}}[p.atmosphere||"Warm sand"]||{};
     const vars={"--img-filter":filter,...atmo}; for(const k in vars) root.style.setProperty(k,vars[k]);
   }
-  componentDidMount(){ this.apply(); document.title="Robertson — Studio Browne"; const root=this._root; if(!root) return;
+  componentDidMount(){ this.apply(); const root=this._root; if(!root) return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     this._fu=[...root.querySelectorAll('.fu')].map(el=>({el,c:0,t:0}));
     this._q=[...root.querySelectorAll('.qfade')].map(el=>({el,c:0,t:0}));

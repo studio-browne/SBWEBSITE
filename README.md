@@ -14,11 +14,12 @@ beside it. No build step, no server, no dependencies to install.
 | `studio.html` | Studio / about |
 | `contact.html` | Inquiry |
 | `vallejo.html` | Vallejo — Pacific Heights, SF, 2020 |
-| `robertson.html` | Robertson — Beverly Hills, CA, 2025 |
+| `robertson.html` | Robertson — Beverly Hills, CA, in progress |
 | `jackson.html` | Jackson — Pacific Heights, SF, 2018 |
+| `broadway.html` | Broadway — Pacific Heights, SF, 2019 |
 | `filbert.html` | Filbert — Russian Hill, SF, 2018 |
 | `washington.html` | Washington — Russian Hill, SF, 2017 |
-| `project.html` | Blank project template |
+| `project.html` | Cabo — San José del Cabo, MX, in progress |
 
 ## Layout
 

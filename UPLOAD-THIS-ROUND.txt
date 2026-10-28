@@ -1,0 +1,43 @@
+STUDIO BROWNE — upload to GitHub (this round)
+=============================================
+20 files, all in this folder. One drag is fine.
+
+In your repository: "Add file" > "Upload files".
+Drag in these, let them replace the old ones:
+
+PAGES (11)
+  index.html       ivory linen, signature, intro, order, Principal line, SEO, newsletter,
+                   h1, favicon, business info for Google, mobile email box
+  studio.html      ivory linen, statement up, headshot in grid, signature, SEO, favicon
+  work.html        ivory linen, new order, SEO, favicon
+  contact.html     ivory linen, SEO, favicon, phone form no longer cut off on the left
+  project.html     SEO, favicon (Cabo)
+  washington.html  SEO, favicon (hidden from Google)
+  vallejo.html     copy + SEO + favicon
+  filbert.html     copy + SEO + favicon
+  broadway.html    copy, two photos removed + SEO + favicon
+  jackson.html     copy + SEO + favicon
+  robertson.html   year removed + SEO + favicon
+
+SCRIPTS (2) — do not skip
+  ds-bundle.js     Studio clean-up, photo lock, Inquire copy
+  image-slot.js    photo lock: stops the zoom / stuck-on-Vallejo bug
+
+ICONS (6) — new, go in the main folder next to index.html
+  favicon.ico  favicon-16.png  favicon-32.png
+  apple-touch-icon.png  icon-192.png  icon-512.png
+
+PAPER (1) — new, main folder too
+  linen-ivory.jpg  the ivory linen background
+
+Commit message:  Signature, Studio, copy, SEO, favicon
+Click "Commit changes".
+
+CHECK IT (give it a minute, then hard-refresh):
+  - Browser tab shows the B mark
+  - Home, Studio, Work, Inquire sit on ivory linen
+  - Homepage: signature under the headshot, "Matt Browne · Principal"
+  - Work: Vallejo 01, Jackson 02, Broadway 03, Filbert 04
+  - Phone sideways: tapping a project opens THAT project
+  - Google's checker: search.google.com/test/rich-results, paste the
+    homepage link, it should find "Local business"

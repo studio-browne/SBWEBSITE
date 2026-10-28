@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broadway — Custom Lighting, Pacific Heights | Studio Browne</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="A Pacific Heights house where three custom pieces do all the talking. Full-service interiors by Studio Browne.">
+<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/broadway.html">
+<meta property="og:site_name" content="Studio Browne">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Broadway — Custom Lighting, Pacific Heights | Studio Browne">
+<meta property="og:description" content="A Pacific Heights house where three custom pieces do all the talking. Full-service interiors by Studio Browne.">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/broadway/broadway-open.webp">
+<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/broadway.html">
+<meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
 <body>
@@ -51,8 +65,8 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 <section class="fu ws-band" style="padding-top:0;padding-bottom:0"><div class="ws-plate" style="aspect-ratio:3/2;width:100%"><image-slot id="proj-broadway-open" src="assets/images/broadway/broadway-open.webp" shape="rect" placeholder="Drop the hero photo" style="width:100%;height:100%"></image-slot></div></section>
 <section class="fu ws-band" style="padding-top:clamp(2.6rem,5vw,4.2rem);padding-bottom:0">
 <div class="ws-essay">
-<p class="ws-lead">A Pacific Heights house where a few custom pieces carry all the drama, so every room around them can stay quiet.</p>
-<p class="ws-body">It begins at the stair, where a ribbon of blackened steel coils down through the stairwell, carrying perforated bowls that scatter pinpoints of light across the plaster. It went up by hand, on ladders, one curve at a time. Upstairs, a tufted leather daybed hangs from the ceiling on slender cables; it was drawn first in ballpoint, then cut and welded in a metal shop before it was lifted into place. Overhead, a spiral of lit rings turns the ceiling into something worth looking up at. Everything else stays soft and pale, with drapery at the windows and a deep rug underfoot, so the made pieces read like sculpture in a gallery.</p>
+<p class="ws-lead">A Pacific Heights house where three custom pieces do all the&nbsp;talking.</p>
+<div><p class="ws-body">At the stair, a ribbon of blackened steel coils down through the stairwell, its perforated bowls throwing pinpoints of light across the plaster. Upstairs, a tufted leather daybed hangs from the ceiling. It started as a ballpoint sketch and finished in a metal shop.</p><p class="ws-body" style="margin-top:1.1em">Overhead, a spiral of lit rings. Everything else stays soft and pale, so the made pieces read like&nbsp;sculpture.</p></div>
 </div>
 </section>
 <section class="fu ws-band" style="padding-top:clamp(2rem,4vw,3.2rem);padding-bottom:clamp(1.2rem,2.5vw,2rem)">
@@ -91,7 +105,7 @@ class Component extends DCLogic {
     const atmo={"Cream":{"--sb-paper":"#E7DECB","--surface-inset":"#D3C6AC"},"Warm sand":{"--sb-paper":"#DCD0B8","--surface-inset":"#C6B99F"},"Dusk clay":{"--sb-paper":"#CBBCA0","--surface-inset":"#AD997D"}}[p.atmosphere||"Warm sand"]||{};
     const vars={"--img-filter":filter,...atmo}; for(const k in vars) root.style.setProperty(k,vars[k]);
   }
-  componentDidMount(){ this.apply(); document.title="Broadway — Studio Browne"; const root=this._root; if(!root) return;
+  componentDidMount(){ this.apply(); const root=this._root; if(!root) return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     this._fu=[...root.querySelectorAll('.fu')].map(el=>({el,c:0,t:0}));
     this._q=[...root.querySelectorAll('.qfade')].map(el=>({el,c:0,t:0}));

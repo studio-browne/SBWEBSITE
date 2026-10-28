@@ -1,8 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Washington — Russian Hill | Studio Browne</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="A Russian Hill residence by Studio Browne.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/washington.html">
+<meta property="og:site_name" content="Studio Browne">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Washington — Russian Hill | Studio Browne">
+<meta property="og:description" content="A Russian Hill residence by Studio Browne.">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/project-living.webp">
+<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/washington.html">
+<meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
 <body>
@@ -90,7 +105,7 @@ class Component extends DCLogic {
     const atmo={"Cream":{"--sb-paper":"#E7DECB","--surface-inset":"#D3C6AC"},"Warm sand":{"--sb-paper":"#DCD0B8","--surface-inset":"#C6B99F"},"Dusk clay":{"--sb-paper":"#CBBCA0","--surface-inset":"#AD997D"}}[p.atmosphere||"Warm sand"]||{};
     const vars={"--img-filter":filter,...atmo}; for(const k in vars) root.style.setProperty(k,vars[k]);
   }
-  componentDidMount(){ this.apply(); document.title="Washington — Studio Browne"; const root=this._root; if(!root) return;
+  componentDidMount(){ this.apply(); const root=this._root; if(!root) return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     this._fu=[...root.querySelectorAll('.fu')].map(el=>({el,c:0,t:0}));
     this._q=[...root.querySelectorAll('.qfade')].map(el=>({el,c:0,t:0}));

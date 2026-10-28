@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackson — 1895 Victorian, Pacific Heights | Studio Browne</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="An 1895 Pacific Heights house by William H. Lillie, reworked for a family of five and a chocolate lab. Interiors by Studio Browne.">
+<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/jackson.html">
+<meta property="og:site_name" content="Studio Browne">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jackson — 1895 Victorian, Pacific Heights | Studio Browne">
+<meta property="og:description" content="An 1895 Pacific Heights house by William H. Lillie, reworked for a family of five and a chocolate lab. Interiors by Studio Browne.">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/jackson/jackson-living-new.webp">
+<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/jackson.html">
+<meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
 <body>
@@ -52,7 +66,7 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 <section class="fu ws-band" style="padding-top:clamp(2.6rem,5vw,4.2rem);padding-bottom:0">
 <div class="ws-essay">
 <p class="ws-lead">Jackson was dreamed up in 1895 by William H. Lillie for Henry Lund, royal consul to Norway and Sweden. Yeah. We&nbsp;know.</p>
-<div><p class="ws-body">A hundred-some years later she was still standing, still mostly herself, and showing every bit of it. The mahogany millwork is all original. So is the stained glass mosaic at the landing, which does most of the talking the second you step from the entry toward the front parlor. The fireplaces and their hand-carved mantels never left either. They just needed a little attention and a lot less varnish.</p><p class="ws-body" style="margin-top:1.1em">Our clients were, understandably, nervous about touching any of it. So we didn&rsquo;t call it a renovation. We called it upkeep. Nobody was taking a limb off. We were letting the house breathe, giving each room a job again, and making space for a family that keeps growing.</p><p class="ws-body" style="margin-top:1.1em">Downstairs, two original walls came out. Not a move we suggest lightly, but here it let the whole floor read as one room instead of a string of them. The stair stayed exactly as we found it: La Farge glass over the window seat, a Juliet balcony at the top, a copper-leaf ceiling floating over the landing.</p><p class="ws-body" style="margin-top:1.1em">The furniture is quiet and textural, some old, some new, none of it trying too hard. What stitches the floors together is the art, collected and found all over the place and hung wherever it made the most sense.</p><p class="ws-body" style="margin-top:1.1em">Out back, ferns and Japanese maples hem in a stone terrace and a proper flat lawn. Which, for a family of five and a chocolate lab, is really the whole&nbsp;point.</p></div>
+<div><p class="ws-body">A century later she was still mostly herself: original mahogany millwork, a stained glass mosaic at the landing, hand-carved mantels that just needed a lot less varnish.</p><p class="ws-body" style="margin-top:1.1em">Our clients were nervous about touching any of it, so we didn&rsquo;t call it a renovation. We called it upkeep. Two original walls came out downstairs so the floor reads as one room. The stair, with its La Farge glass and copper-leaf ceiling, stayed exactly as we found it.</p><p class="ws-body" style="margin-top:1.1em">Out back, ferns and Japanese maples hem in a stone terrace and a proper flat lawn. For a family of five and a chocolate lab, that&rsquo;s the whole&nbsp;point.</p></div>
 </div>
 </section>
 <section class="fu ws-band" style="padding-top:clamp(2rem,4vw,3.2rem);padding-bottom:clamp(1.2rem,2.5vw,2rem)">
@@ -103,7 +117,7 @@ class Component extends DCLogic {
     const atmo={"Cream":{"--sb-paper":"#E7DECB","--surface-inset":"#D3C6AC"},"Warm sand":{"--sb-paper":"#DCD0B8","--surface-inset":"#C6B99F"},"Dusk clay":{"--sb-paper":"#CBBCA0","--surface-inset":"#AD997D"}}[p.atmosphere||"Warm sand"]||{};
     const vars={"--img-filter":filter,...atmo}; for(const k in vars) root.style.setProperty(k,vars[k]);
   }
-  componentDidMount(){ this.apply(); document.title="Jackson — Studio Browne"; const root=this._root; if(!root) return;
+  componentDidMount(){ this.apply(); const root=this._root; if(!root) return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     this._fu=[...root.querySelectorAll('.fu')].map(el=>({el,c:0,t:0}));
     this._q=[...root.querySelectorAll('.qfade')].map(el=>({el,c:0,t:0}));
