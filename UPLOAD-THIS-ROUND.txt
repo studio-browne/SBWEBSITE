@@ -1,14 +1,15 @@
 STUDIO BROWNE — upload to GitHub (this round)
 =============================================
-20 files, all in this folder. One drag is fine.
+22 files in this folder (one drag), then the share folder (second drag).
 
 In your repository: "Add file" > "Upload files".
 Drag in these, let them replace the old ones:
 
 PAGES (11)
-  index.html       ivory linen, signature, intro, order, Principal line, SEO, newsletter,
+  index.html       new hero video timing, ivory linen, signature, intro, order, Principal line, SEO, newsletter,
                    h1, favicon, business info for Google, mobile email box
-  studio.html      ivory linen, statement up, headshot in grid, signature, SEO, favicon
+  studio.html      ivory linen, statement up, headshot in grid, signature, SEO, favicon,
+                   phone: headshot beside signature, margins lined up
   work.html        ivory linen, new order, SEO, favicon
   contact.html     ivory linen, SEO, favicon, phone form no longer cut off on the left
   project.html     SEO, favicon (Cabo)
@@ -20,7 +21,8 @@ PAGES (11)
   robertson.html   year removed + SEO + favicon
 
 SCRIPTS (2) — do not skip
-  ds-bundle.js     Studio clean-up, photo lock, Inquire copy
+  ds-bundle.js     Studio clean-up, photo lock, Inquire copy,
+                   contact + newsletter forms open an email to you
   image-slot.js    photo lock: stops the zoom / stuck-on-Vallejo bug
 
 ICONS (6) — new, go in the main folder next to index.html
@@ -30,14 +32,38 @@ ICONS (6) — new, go in the main folder next to index.html
 PAPER (1) — new, main folder too
   linen-ivory.jpg  the ivory linen background
 
-Commit message:  Signature, Studio, copy, SEO, favicon
+GOOGLE (2) — new, main folder too
+  sitemap.xml      list of your pages for Google
+  robots.txt       points Google at the sitemap
+
+SHARE PREVIEWS (11) — new, a SECOND upload (they go in a subfolder)
+  Click into the "assets" folder in your repository, then
+  "Add file" > "Upload files" and drag in the whole "share" folder
+  from assets\share. GitHub keeps the folder name: assets/share/.
+  home, studio, work, contact, vallejo, jackson, broadway, filbert,
+  robertson, cabo, washington (.jpg, 1200 x 630)
+  To swap a preview photo later: replace that .jpg with another
+  1200 x 630 image of the same name and upload it again.
+
+HERO VIDEO (2) — new, two more small uploads into subfolders
+  In your repository click into assets > video, "Add file" > "Upload files",
+  drag in  hero-main.mp4  (replaces the old one, 19 MB, your original at full quality)
+  Then assets > images, upload  hero-main-poster.webp  (the still that
+  shows for a split second while the video loads)
+
+Commit message:  Signature, Studio, copy, SEO, favicon, forms, share previews
 Click "Commit changes".
 
 CHECK IT (give it a minute, then hard-refresh):
   - Browser tab shows the B mark
+  - Homepage hero plays the new, sharper video
   - Home, Studio, Work, Inquire sit on ivory linen
   - Homepage: signature under the headshot, "Matt Browne · Principal"
   - Work: Vallejo 01, Jackson 02, Broadway 03, Filbert 04
   - Phone sideways: tapping a project opens THAT project
+  - Inquire: fill it in, Send opens an email to you ready to go
   - Google's checker: search.google.com/test/rich-results, paste the
     homepage link, it should find "Local business"
+  - Text yourself a link: it shows a photo, not a page screenshot.
+    iPhone remembers old previews, so add ?v=2 to the end of the link
+    the first time you test

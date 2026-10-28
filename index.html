@@ -10,7 +10,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Studio Browne — Interior Design, Beverly Hills &amp; San Francisco">
 <meta property="og:description" content="Full-service interior design studio led by Matt Browne. Warm, modern homes in Los Angeles and San Francisco, made from natural materials and real craftsmanship.">
-<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/images/hero-main-poster.webp">
+<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/share/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/">
 <meta name="twitter:card" content="summary_large_image"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#CDC0A7;color:#000}html{background:#CDC0A7}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <script src="support.js"></script>
@@ -310,7 +312,7 @@ class Component extends DCLogic {
     // dissolves. It fades up from black and back out to black, so playback rides only the
     // lit window and the two elements cross-dissolve at the loop point: no black flash,
     // no hard cut, no seek back to frame 1 while anything is visible.
-    const START = 1.5, LOOP_AT = 12.4, PREROLL = 1.2, WARM = 0.9;
+    const START = 0.9, LOOP_AT = 15.2, PREROLL = 1.2, WARM = 0.9;
     const XFADE = Math.max(0.5, this.props.fadeSeconds ?? 1.2);
     const rate = Math.max(0.35, Math.min(1.25, this.props.heroSpeed ?? 0.5));
     const els = [a, b].filter(Boolean);

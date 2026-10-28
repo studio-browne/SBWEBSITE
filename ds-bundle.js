@@ -1,3 +1,4 @@
+function sbMailto(u){let fr=true;try{fr=window.top!==window.self}catch(_){}if(fr){const h=document.createElement("iframe");h.style.display="none";h.src=u;document.body.appendChild(h);setTimeout(()=>h.remove(),2000)}else{window.location.href=u}}
 /* @ds-bundle: {"format":4,"namespace":"StudioBrowneDesignSystem_6dac50","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"LogoLoader","sourcePath":"components/brand/LogoLoader.jsx"},{"name":"Polaroid","sourcePath":"components/content/Polaroid.jsx"},{"name":"ProjectCard","sourcePath":"components/content/ProjectCard.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/editorial/Divider.jsx"},{"name":"Eyebrow","sourcePath":"components/editorial/Eyebrow.jsx"},{"name":"PullQuote","sourcePath":"components/editorial/PullQuote.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Tag","sourcePath":"components/forms/Tag.jsx"},{"name":"CornerFrame","sourcePath":"components/layout/CornerFrame.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"f3e3a031e223","components/brand/LogoLoader.jsx":"d506b8fa486e","components/brand/tweaks-panel.jsx":"4f181eb354cd","components/content/Polaroid.jsx":"c4c7236ac38e","components/content/ProjectCard.jsx":"68f577548331","components/core/Button.jsx":"268cea12a6ed","components/editorial/Divider.jsx":"4bed933042fb","components/editorial/Eyebrow.jsx":"1adb87dd5fb4","components/editorial/PullQuote.jsx":"e8dfac621c95","components/forms/Input.jsx":"c1237e3e85d9","components/forms/Tag.jsx":"7bcd1453e0d2","components/layout/CornerFrame.jsx":"fed40033823c","ui_kits/website-fresh/Contact.jsx":"fc44c7d2a0c1","ui_kits/website-fresh/Data.jsx":"7ad8a32ec05a","ui_kits/website-fresh/Home.jsx":"38481d328bd5","ui_kits/website-fresh/Icons.jsx":"483a496e39ba","ui_kits/website-fresh/Intro.jsx":"243e386bae57","ui_kits/website-fresh/Panels.jsx":"2d959e507142","ui_kits/website-fresh/Project.jsx":"cea2cdd28117","ui_kits/website-fresh/Studio.jsx":"6d4042ff3463","ui_kits/website-fresh/Work.jsx":"5aead6ea5d27","ui_kits/website-fresh/image-slot.js":"36d0a5575b41"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
@@ -1756,9 +1757,11 @@ function SBContactPanel({
       color: "var(--text-primary)",
       marginTop: "1rem"
     }
-  }, "Thank you \u2014 we'll be in touch.") : /*#__PURE__*/React.createElement("form", {
+  }, "Thank you \u2014 hit send in your email to finish.") : /*#__PURE__*/React.createElement("form", {
     onSubmit: e => {
       e.preventDefault();
+      const em = (e.currentTarget.querySelector("input").value || "").trim();
+      sbMailto("mailto:matt@studio-browne.com?subject=" + encodeURIComponent("Newsletter sign-up") + "&body=" + encodeURIComponent("Please add me to the Studio Browne newsletter.\n\n" + em));
       setSent(true);
     },
     style: {
@@ -1778,6 +1781,8 @@ function SBContactPanel({
       color: "var(--text-primary)"
     }
   }, "Sign up to our studio newsletter"), /*#__PURE__*/React.createElement("input", {
+    type: "email",
+    "aria-label": "Your email address",
     placeholder: "YOUR EMAIL ADDRESS",
     required: true,
     style: {
@@ -1858,9 +1863,25 @@ function SBContact() {
       fontSize: "1.2rem",
       color: "var(--text-primary)"
     }
-  }, "Thank you \u2014 your note is on its way.") : /*#__PURE__*/React.createElement("form", {
+  }, "Your email should open with your note ready \u2014 just hit send.", /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--font-sans)",
+      fontSize: "0.8rem",
+      lineHeight: 1.6,
+      color: "var(--text-secondary)",
+      marginTop: "1rem"
+    }
+  }, "Nothing opened? Write to ", /*#__PURE__*/React.createElement("a", {
+    href: "mailto:matt@studio-browne.com",
+    style: {
+      borderBottom: "1px solid currentColor"
+    }
+  }, "matt@studio-browne.com"), " or call 310.486.2867.")) : /*#__PURE__*/React.createElement("form", {
     onSubmit: e => {
       e.preventDefault();
+      const v = Array.from(e.currentTarget.querySelectorAll("input,textarea")).map(x => (x.value || "").trim());
+      const body = "Name: " + (v[0] || "") + "\nEmail: " + (v[1] || "") + "\nProject location: " + (v[2] || "") + "\n\n" + (v[3] || "");
+      sbMailto("mailto:matt@studio-browne.com?subject=" + encodeURIComponent("Project inquiry \u2014 " + (v[0] || "")) + "&body=" + encodeURIComponent(body));
       setSent(true);
     },
     style: {
