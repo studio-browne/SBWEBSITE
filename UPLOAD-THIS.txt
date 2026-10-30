@@ -1,0 +1,57 @@
+STUDIO BROWNE — what to upload to GitHub
+========================================
+Everything in THIS folder. 66 files. Nothing else on your
+computer needs to go up.
+
+   6 web pages      index, work, broadway, jackson, filbert, vallejo
+  60 photos         inside the assets folder
+
+Do it in two drags, not one. The uploader has silently dropped
+files on you before when given too many at once.
+
+
+DRAG 1 — the pages
+------------------
+In your repository, click "Add file" > "Upload files".
+
+Select the six .html files in this folder and drag them in
+together. Do NOT drag the assets folder in this pass.
+
+Commit message:  Pages
+Click "Commit changes".
+
+
+DRAG 2 — the photos
+-------------------
+"Add file" > "Upload files" again.
+
+Drag in the single folder called  assets
+
+Wait for all 60 to finish before committing. If the count on
+screen is lower than 60, cancel and drag the assets folder
+again — do not commit a short upload.
+
+Commit message:  Photos
+Click "Commit changes".
+
+
+CHECK IT
+--------
+Give it about a minute, then open:
+
+  https://YOUR-USERNAME.github.io/REPO-NAME/
+
+  - Homepage should show Jackson with the blue Victorian
+  - Work page should list 6 projects, Filbert at 03
+  - broadway.html and jackson.html should both open
+
+
+WHAT CHANGED THIS ROUND
+-----------------------
+Broadway      new project page, work cover, homepage card
+Jackson       new project page, 9 photos, work cover, homepage card
+Filbert       26 photos, moved to 03 on the work page
+Vallejo       3 photos added, new homepage card photo
+Washington    hidden from the work page (page file still exists,
+              the card is commented out in work.html)
+Homepage      project rows resized to 4:5
