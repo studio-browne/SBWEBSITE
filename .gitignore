@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+*.tmp
+*.bak
+node_modules/
