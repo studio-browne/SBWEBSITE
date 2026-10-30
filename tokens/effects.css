@@ -1,0 +1,25 @@
+/* ============================================================
+   STUDIO BROWNE — Effects
+   Shadows are soft, warm and low — as if cast by afternoon sun.
+   Never cool grey drop shadows. Motion is slow and unhurried.
+   ============================================================ */
+
+:root {
+  /* Warm, diffuse shadows (tinted with espresso, never pure black) */
+  --shadow-sm:  0 1px 2px rgba(60, 46, 36, 0.06);
+  --shadow-md:  0 8px 24px rgba(60, 46, 36, 0.10);
+  --shadow-lg:  0 24px 60px rgba(60, 46, 36, 0.14);
+  --shadow-inset: inset 0 0 0 1px var(--line);
+
+  /* Image treatment — a whisper of warmth & depth */
+  --img-filter: saturate(0.96) contrast(1.02); /* @kind other */
+
+  /* Motion — slow, gallery-like */
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --dur-fast:  180ms; /* @kind other */
+  --dur-med:   320ms; /* @kind other */
+  --dur-slow:  600ms; /* @kind other */
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px var(--surface-page), 0 0 0 4px var(--accent);
+}

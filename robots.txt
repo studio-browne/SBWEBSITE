@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studio-browne.github.io/SBWEBSITE/sitemap.xml

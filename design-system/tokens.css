@@ -1,0 +1,152 @@
+/* Studio Browne Design System — generated from tokens.json */
+:root, [data-theme="default"] {
+  --sb-coffee: #594c40;
+  --sb-camel: #b59e7d;
+  --sb-sand: #cdc0a7;
+  --sb-taupe: #aba496;
+  --sb-charcoal: #413f3e;
+  --sb-espresso: #3a2d22;
+  --sb-paper: #dbd2c0;
+  --sb-sand-lift: #d6cbb4;
+  --sb-alabaster: var(--sb-sand);
+  --sb-limewash: var(--sb-sand-lift);
+  --sb-linen: var(--sb-taupe);
+  --sb-clay: var(--sb-camel);
+  --sb-caramel: var(--sb-coffee);
+  --sb-walnut: var(--sb-coffee);
+  --sb-olive: var(--sb-coffee);
+  --sb-sage: var(--sb-taupe);
+  --sb-ink: var(--sb-charcoal);
+  --sb-stone: var(--sb-taupe);
+  --sb-fog: var(--sb-taupe);
+  --sb-porcelain: var(--sb-sand);
+  --sb-oxblood: var(--sb-espresso);
+  --sb-terracotta: var(--sb-camel);
+  --sb-periwinkle: var(--sb-camel);
+  --surface-page: var(--sb-sand);
+  --surface-inset: var(--sb-sand-lift);
+  --surface-raised: var(--sb-sand-lift);
+  --surface-card: var(--sb-paper);
+  --surface-ink: var(--sb-espresso);
+  --surface-ink-deep: var(--sb-charcoal);
+  --panel-greige: var(--sb-sand);
+  --panel-clay: var(--sb-camel);
+  --panel-blue: var(--sb-camel);
+  --panel-camel: var(--sb-camel);
+  --panel-oxblood: var(--sb-espresso);
+  --panel-stone: var(--sb-taupe);
+  --panel-sage: var(--sb-taupe);
+  --text-primary: var(--sb-charcoal);
+  --text-secondary: var(--sb-coffee);
+  --text-muted: #7e756a;
+  --text-on-dark: var(--sb-sand);
+  --text-on-dark-dim: #b9af9c;
+  --text-on-clay: var(--sb-espresso);
+  --text-on-blue: var(--sb-espresso);
+  --accent: var(--sb-camel);
+  --accent-deep: var(--sb-coffee);
+  --accent-green: var(--sb-coffee);
+  --line: rgba(65, 63, 62, 0.16);
+  --line-strong: rgba(65, 63, 62, 0.30);
+  --line-on-dark: rgba(205, 192, 167, 0.24);
+  --shadow-sm: 0 1px 2px rgba(60, 46, 36, 0.06);
+  --shadow-md: 0 8px 24px rgba(60, 46, 36, 0.10);
+  --shadow-lg: 0 24px 60px rgba(60, 46, 36, 0.14);
+  --shadow-inset: inset 0 0 0 1px rgba(65, 63, 62, 0.16);
+}
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --page-max: 1280px;
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 600ms;
+  --fs-display: clamp(3.5rem, 8vw, 7rem);
+  --fs-h1: clamp(2.5rem, 5vw, 4rem);
+  --fs-h2: clamp(2rem, 3.5vw, 2.75rem);
+  --img-filter: saturate(0.96) contrast(1.02);
+  --focus-ring: 0 0 0 2px #CDC0A7, 0 0 0 4px #B59E7D;
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-semi: 600;
+  --fw-bold: 700;
+  --lh-tight: 1.04;
+  --lh-snug: 1.2;
+  --ls-display: 0.01em;
+  --ls-tight: -0.01em;
+  --font-display: "Jost", "Futura", "Century Gothic", sans-serif;
+  --font-title: "Manofa", "Jost", sans-serif;
+  --font-serif: "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif;
+  --font-sans: "Mulish", "Helvetica Neue", system-ui, sans-serif;
+  --font-hand: "Homer", "Caveat", "Segoe Script", cursive;
+  --font-manofa: "Manofa", "Jost", sans-serif;
+  --text-fs-h3: 400 1.75rem/1.4 var(--font-sans);
+  --text-fs-h4: 400 1.25rem/1.4 var(--font-sans);
+  --text-fs-body-lg: 400 1.1875rem/1.4 var(--font-sans);
+  --text-fs-body: 400 1.0625rem/1.65 var(--font-sans);
+  --text-fs-small: 400 0.9375rem/1.4 var(--font-sans);
+  --text-fs-label: 400 0.75rem/1.4 var(--font-sans);
+}
+.fs-h3 {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fs-h4 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fs-body-lg {
+  font-family: var(--font-sans);
+  font-size: 1.1875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fs-body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fs-small {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fs-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+}
+@font-face {
+  font-family: "Manofa";
+  src: url("fonts/manofa-condensed.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}

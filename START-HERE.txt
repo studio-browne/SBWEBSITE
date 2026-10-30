@@ -1,0 +1,145 @@
+STUDIO BROWNE - putting this site online with GitHub
+=====================================================
+
+No code. Everything is drag-and-drop in a web browser.
+
+There are 144 files here and GitHub's upload box only takes 100 at a
+time, so the upload happens in three passes. That is the only
+complication in the whole process.
+
+
+STEP 1 - MAKE A GITHUB ACCOUNT
+------------------------------
+Go to  github.com  and click "Sign up".
+Your username becomes part of your web address, so pick something
+clean - studiobrowne, or mattbrowne.
+Confirm the email they send you.
+
+
+STEP 2 - MAKE A NEW REPOSITORY
+------------------------------
+A "repository" is just a folder that lives on GitHub.
+
+Top right, click the + sign, then "New repository".
+
+  Repository name ..... studio-browne-site
+  Public .............. yes (required for free hosting)
+  Add a README ........ leave UNCHECKED
+  .gitignore .......... None
+  License ............. None
+
+Click "Create repository".
+
+
+STEP 3 - UPLOAD, IN THREE PASSES
+--------------------------------
+On the page that appears, click "uploading an existing file".
+
+Open this folder on your computer beside the browser window.
+
+
+  PASS 1 - the pages
+  ------------------
+  Select these and drag them in together:
+
+    every loose file in this folder
+      (index.html, work.html, studio.html, contact.html,
+       vallejo.html, robertson.html, jackson.html, filbert.html,
+       washington.html, project.html, styles.css, support.js,
+       ds-bundle.js, image-slot.js, README.md, START-HERE.txt)
+
+    the folder  tokens
+    the folder  lib
+
+  Commit message:  Pages
+  Click "Commit changes".
+
+
+  PASS 2 - the photography
+  ------------------------
+  Back in the repository, click "Add file" then "Upload files".
+
+    Drag in the single folder  assets
+
+  This is the big one - 84 files including the video. Give it a few
+  minutes and wait for every file to finish.
+
+  Commit message:  Assets
+  Click "Commit changes".
+
+
+  PASS 3 - the reference material
+  -------------------------------
+  "Add file" then "Upload files" again.
+
+    Drag in  design-system
+    Drag in  brand-assets
+
+  Commit message:  Design system
+  Click "Commit changes".
+
+
+  When you are done, the repository should show index.html at the
+  top level, next to the folders assets, tokens, lib, design-system
+  and brand-assets. If index.html is sitting inside another folder,
+  the site will not work - delete and re-upload that pass.
+
+
+STEP 4 - TURN ON HOSTING
+------------------------
+In your repository, click "Settings" (top row of tabs).
+In the left sidebar, click "Pages".
+
+  Source ...... Deploy from a branch
+  Branch ...... main      Folder ...... / (root)
+
+Click "Save".
+
+Wait 2-3 minutes, then refresh. A green banner gives you the live
+address:
+
+  https://YOUR-USERNAME.github.io/studio-browne-site/
+
+That is the site. Send it to anyone.
+
+
+STEP 5 - YOUR OWN DOMAIN (optional, later)
+------------------------------------------
+Same Pages screen, "Custom domain" box. Type studio-browne.com and
+save. GitHub then shows the exact settings to hand your domain
+registrar. Tick "Enforce HTTPS" once it lets you.
+
+
+IF THE THREE PASSES ANNOY YOU
+-----------------------------
+Download GitHub Desktop (desktop.github.com). It is a normal app,
+not a command line. Sign in, choose "Add an existing repository",
+point it at this folder, and it uploads all 144 files in one go with
+no limits. Worth it if you plan to change the site often.
+
+
+CHANGING SOMETHING LATER
+------------------------
+Open the repository, click the file, click the pencil icon, edit,
+click "Commit changes". The live site updates in about a minute.
+
+To swap a photo: open assets/images, click "Add file" then "Upload
+files", drag the new image in, and give it the exact same filename
+as the one it replaces.
+
+
+ONE THING WORTH KNOWING
+-----------------------
+assets/video/hero-main.mp4 is 19 MB. GitHub accepts it - it only
+objects above 50 MB - but it is the slowest part of the upload and
+the slowest thing for a visitor to load. If the homepage ever feels
+sluggish, that file is why, and it can be compressed.
+
+
+WHAT ELSE IS IN HERE
+--------------------
+design-system/   Colors, type, spacing, component notes. Reference
+                 only - not part of the live site, but harmless to
+                 keep in the repository.
+brand-assets/    Logo marks and the two brand fonts.
+lib/             Code the pages need to run. Do not delete it.

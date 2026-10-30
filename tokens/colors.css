@@ -1,0 +1,71 @@
+/* ============================================================
+   STUDIO BROWNE — Color
+   Client palette: warm, desaturated earth neutrals.
+   594C40 coffee · B59E7D camel · CDC0A7 sand ·
+   ABA496 taupe · 413F3E charcoal · 3A2D22 espresso
+   ============================================================ */
+
+:root {
+  /* ---- Client palette (raw) ------------------------------- */
+  --sb-coffee:     #594C40;
+  --sb-camel:      #B59E7D;
+  --sb-sand:       #CDC0A7;
+  --sb-taupe:      #ABA496;
+  --sb-charcoal:   #413F3E;
+  --sb-espresso:   #3A2D22;
+  /* light tints derived from the sand ground */
+  --sb-paper:      #DBD2C0;  /* card / raised surface */
+  --sb-sand-lift:  #D6CBB4;  /* raised warm tone */
+
+  /* Legacy aliases (kept so components resolve) */
+  --sb-alabaster:  var(--sb-sand);
+  --sb-limewash:   var(--sb-sand-lift);
+  --sb-linen:      var(--sb-taupe);
+  --sb-clay:       var(--sb-camel);
+  --sb-caramel:    var(--sb-coffee);
+  --sb-walnut:     var(--sb-coffee);
+  --sb-olive:      var(--sb-coffee);
+  --sb-sage:       var(--sb-taupe);
+  --sb-ink:        var(--sb-charcoal);
+  --sb-stone:      var(--sb-taupe);
+  --sb-fog:        var(--sb-taupe);
+
+  /* Section grounds */
+  --sb-porcelain:  var(--sb-sand);      /* primary page ground */
+  --sb-oxblood:    var(--sb-espresso);  /* dark panels & corner letters */
+  --sb-terracotta: var(--sb-camel);
+  --sb-periwinkle: var(--sb-camel);
+
+  /* ---- Semantic aliases ----------------------------------- */
+  --surface-page:     var(--sb-sand);
+  --surface-inset:    var(--sb-sand-lift);
+  --surface-raised:   var(--sb-sand-lift);
+  --surface-card:     var(--sb-paper);
+  --surface-ink:      var(--sb-espresso);   /* dark editorial panels */
+  --surface-ink-deep: var(--sb-charcoal);
+
+  /* Full-viewport section grounds */
+  --panel-greige:     var(--sb-sand);
+  --panel-clay:       var(--sb-camel);
+  --panel-blue:       var(--sb-camel);
+  --panel-camel:      var(--sb-camel);
+  --panel-oxblood:    var(--sb-espresso);
+  --panel-stone:      var(--sb-taupe);
+  --panel-sage:       var(--sb-taupe);
+
+  --text-primary:     var(--sb-charcoal);
+  --text-secondary:   var(--sb-coffee);
+  --text-muted:       #7E756A;               /* taupe, darkened for legibility */
+  --text-on-dark:     var(--sb-sand);
+  --text-on-dark-dim: #B9AF9C;
+  --text-on-clay:     var(--sb-espresso);    /* dark text on camel */
+  --text-on-blue:     var(--sb-espresso);
+
+  --accent:           var(--sb-camel);
+  --accent-deep:      var(--sb-coffee);
+  --accent-green:     var(--sb-coffee);
+
+  --line:             rgba(65, 63, 62, 0.16);   /* hairline on light */
+  --line-strong:      rgba(65, 63, 62, 0.30);
+  --line-on-dark:     rgba(205, 192, 167, 0.24);
+}
