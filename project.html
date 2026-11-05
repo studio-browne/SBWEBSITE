@@ -49,9 +49,10 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 .sb-btn{display:inline-block;font-family:var(--font-title);font-size:clamp(0.7rem,1.2vw,0.92rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--text-primary);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 2.6rem;background:transparent;cursor:pointer;transition:background-color .45s cubic-bezier(.22,1,.36,1),color .45s cubic-bezier(.22,1,.36,1),border-color .45s cubic-bezier(.22,1,.36,1)}
 .sb-btn:hover,.sb-btn:focus-visible{background:var(--sb-terracotta);border-color:var(--sb-terracotta);color:var(--sb-porcelain)}
 .ws-plate{overflow:hidden;background:var(--surface-inset);border-radius:var(--radius-sm)}
-.ws-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.75rem,2vw,1.5rem);align-items:start;max-width:1200px;margin:0 auto;padding:clamp(0.75rem,2vw,1.5rem) clamp(1.5rem,5vw,4rem)}
+.ws-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(0.75rem,2vw,1.5rem);align-items:start;max-width:1200px;margin:0 auto;padding:clamp(0.75rem,2vw,1.5rem) clamp(1.5rem,5vw,4rem)}
 .ws-flip>*:first-child{grid-column:2;grid-row:1}.ws-flip>*:last-child{grid-column:1;grid-row:1}
 .ws-band{max-width:1200px;margin:0 auto;padding:clamp(0.75rem,2vw,1.5rem) clamp(1.5rem,5vw,4rem)}
+image-slot{aspect-ratio:auto;min-width:0;min-height:0}.sb-grid>*,.ws-row>*,.sb-work-item{min-width:0}
 /* About block: one narrow column, Manofa heading, Spectral text */
 .ab{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7.5rem)}
 .ab-col{max-width:min(25.9rem,100%);margin:0 auto;color:#4a2b23}
