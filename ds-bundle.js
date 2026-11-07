@@ -3607,7 +3607,7 @@ try { (() => {
       '<div class="ctl" popover="manual" data-dc-edit-transparent><button data-act="replace" title="Replace image">Replace</button>' + '  <button data-act="edit" title="Reframe image">Edit</button></div>' + '<input type="file" accept="' + ACCEPT.join(',') + '" hidden>';
       this._frame = root.querySelector('.frame');
       this._ring = root.querySelector('.ring');
-      this._img = root.querySelector('.frame img');
+      this._img = root.querySelector('.frame img'); this._img.alt = this.getAttribute('alt') || ''; if (this.getAttribute('alt')) { this.setAttribute('role', 'img'); this.setAttribute('aria-label', this.getAttribute('alt')); }
       this._empty = root.querySelector('.empty');
       this._cap = root.querySelector('.cap');
       this._sub = root.querySelector('.sub');
@@ -3809,6 +3809,7 @@ try { (() => {
       });
     }
     connectedCallback() {
+      { const _a = this.getAttribute('alt'); if (_a && this._img) { this._img.alt = _a; this.setAttribute('role', 'img'); this.setAttribute('aria-label', _a); } }
       // Warn once per page — an id-less slot works for the session but
       // cannot persist, and two id-less slots would share nothing.
       if (!this.id && !ImageSlot._warned) {

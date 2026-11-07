@@ -4,20 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Studio — Matt Browne, Principal | Studio Browne</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.studio-browne.com/#matt","name":"Matt Browne","jobTitle":"Principal, Interior Designer","worksFor":{"@id":"https://www.studio-browne.com/#business"},"image":"https://www.studio-browne.com/assets/images/founder-headshot-home.webp","alumniOf":[{"@type":"CollegeOrUniversity","name":"UCLA Extension"},{"@type":"CollegeOrUniversity","name":"Santa Monica College"}],"knowsAbout":["Interior design","Historic restoration","Lighting design","Custom millwork","Photorealistic rendering"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where do you work?","acceptedAnswer":{"@type":"Answer","text":"Mostly Beverly Hills, Los Angeles and San Francisco. We're designing a house in San José del Cabo right now, so yes, we travel."}},{"@type":"Question","name":"What does full-service mean?","acceptedAnswer":{"@type":"Answer","text":"Everything. Concept, floor plans, finishes, furniture, lighting, the contractors and the install. One point of contact and a finished house."}},{"@type":"Question","name":"Do you take on smaller projects?","acceptedAnswer":{"@type":"Answer","text":"Yes. We take a reserved number of commissions, some big and some small, but none are overlooked."}},{"@type":"Question","name":"Do you work on historic homes?","acceptedAnswer":{"@type":"Answer","text":"Often. Jackson dates to 1895 and Filbert to 1914. We keep what makes a house special and update what doesn't serve the people living in it."}},{"@type":"Question","name":"Can I see it before it's built?","acceptedAnswer":{"@type":"Answer","text":"Yes. We render your rooms photorealistically, so you can walk through them before anything is ordered."}},{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Tell us about your home on the Inquire page at https://www.studio-browne.com/contact.html, or call 310.486.2867."}}]}]}</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Matt Browne started Studio Browne to make rooms that have something to say. Tuning rooms, not filling them — warm modern interiors from Beverly Hills.">
-<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/studio.html">
+<link rel="canonical" href="https://www.studio-browne.com/studio.html">
 <meta property="og:site_name" content="Studio Browne">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Studio — Matt Browne, Principal | Studio Browne">
 <meta property="og:description" content="Matt Browne started Studio Browne to make rooms that have something to say. Tuning rooms, not filling them — warm modern interiors from Beverly Hills.">
-<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/share/studio.jpg">
+<meta property="og:image" content="https://www.studio-browne.com/assets/share/studio.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/studio.html">
+<meta property="og:url" content="https://www.studio-browne.com/studio.html">
 <meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
@@ -25,6 +26,7 @@
 <x-dc>
 <!-- @template name="Studio / About" description="Studio Browne — about Matt Browne: intro, oxblood principal panel, experience & capabilities" -->
 <helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&amp;display=swap">
 <script>window.SB_ASSET = "assets";</script>
 <link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
 <style>
@@ -68,6 +70,16 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
   .sb-pgrid:hover .sb-pcap p{opacity:1}}
 
 @media (max-width:760px){main section[style*="panel-camel"]{background:transparent !important;min-height:0 !important;padding:1rem 0 3.5rem !important}main section[style*="panel-camel"] .ft-sep{display:block;height:0;overflow:hidden}}
+/* Services + FAQ: same About-block type as the project pages */
+.ab{padding:clamp(3.5rem,7vw,6.5rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5.5rem);position:relative;z-index:3}
+.ab-col{max-width:min(25.9rem,100%);margin:0 auto;color:#4a2b23}
+.ab-h{font-family:var(--font-title);font-weight:400;font-size:clamp(0.9rem,1.24vw,1.13rem);line-height:1.1;letter-spacing:0;text-transform:uppercase;margin:0 0 0.63rem;color:#3d221b}
+.ab-p{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.62;letter-spacing:0.004em;margin:0 0 0.75em;text-transform:none;color:#4a2b23}
+.ab-k{font-family:"Spectral",var(--font-serif);font-weight:400;font-size:clamp(0.58rem,0.68vw,0.62rem);letter-spacing:0.1em;text-transform:uppercase;margin:1.6rem 0 0.7rem;color:#3d221b}
+.ab-d{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.62;margin:0;color:#4a2b23;text-transform:none}
+.ab-d em,.ab-q{font-style:italic}
+.ab-q{font-family:"Spectral",var(--font-serif);font-weight:400;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.5;margin:0.9em 0 0.15em;color:#3d221b;text-transform:none}
+@media (max-width:760px){.ab-p,.ab-d,.ab-k,.ab-q{font-size:0.78rem}.ab-h{font-size:1.05rem}}
 .sb-cta:hover{color:var(--sb-porcelain) !important;opacity:0.88}
 </style>
 </helmet>
@@ -92,6 +104,26 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
 <img class="sb-plate sb-p3" src="assets/images/studio/studio-03.webp" alt="Art books and a plaster bust on a painted built-in" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
 <img class="sb-plate sb-p4" src="assets/images/studio/studio-06.webp" alt="Sheer curtain and afternoon light across a corner chair" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface-inset)">
 <div class="sb-pcap" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(25%,236px);background:var(--sb-paper);padding:10px;border:1px solid var(--line-strong);box-shadow:var(--shadow-md)"><img src="assets/images/founder-headshot-home.webp" alt="Matt Browne, principal of Studio Browne" style="display:block;width:100%;aspect-ratio:1030/1286;object-fit:cover"></div>
+</div>
+</section>
+<section class="ab" aria-label="Services and questions">
+<div class="ab-col">
+<h2 class="ab-h">What We Do</h2>
+<p class="ab-p">Full-service interior design for homes in Beverly Hills, Los Angeles and San Francisco, plus the occasional house a plane ride&nbsp;away.</p>
+<p class="ab-d"><em>Interior design:</em> full-service, from first sketch to final pillow<br><em>Remodels:</em> kitchens, baths and whole houses<br><em>Historic homes:</em> restorations that keep the character<br><em>Lighting:</em> layouts and bespoke fixtures<br><em>Millwork:</em> custom cabinetry and built-ins<br><em>Sourcing:</em> furniture, art and antiques<br><em>Renderings:</em> photorealistic, so you see it before it&rsquo;s&nbsp;built</p>
+<h3 class="ab-k">Good Questions</h3>
+<p class="ab-q">Where do you work?</p>
+<p class="ab-p">Mostly Beverly Hills, Los Angeles and San Francisco. We&rsquo;re designing a house in San Jos&eacute; del Cabo right now, so yes, we&nbsp;travel.</p>
+<p class="ab-q">What does full-service mean?</p>
+<p class="ab-p">Everything. Concept, floor plans, finishes, furniture, lighting, the contractors and the install. One point of contact and a finished&nbsp;house.</p>
+<p class="ab-q">Do you take on smaller projects?</p>
+<p class="ab-p">Yes. We take a reserved number of commissions, some big and some small, but none are&nbsp;overlooked.</p>
+<p class="ab-q">Do you work on historic homes?</p>
+<p class="ab-p">Often. Jackson dates to 1895 and Filbert to 1914. We keep what makes a house special and update what doesn&rsquo;t serve the people living in&nbsp;it.</p>
+<p class="ab-q">Can I see it before it&rsquo;s built?</p>
+<p class="ab-p">Yes. We render your rooms photorealistically, so you can walk through them before anything is&nbsp;ordered.</p>
+<p class="ab-q">How do we start?</p>
+<p class="ab-p">Tell us about your home on the <a href="contact.html" style="border-bottom:1px solid currentColor">Inquire</a> page, or call&nbsp;310.486.2867.</p>
 </div>
 </section>
 <x-import component-from-global-scope="SBStudio" on-navigate="{{ onNavigate }}" hint-size="100%,100vh"></x-import>
