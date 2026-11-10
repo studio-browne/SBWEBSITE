@@ -1,0 +1,48 @@
+/* ============================================================
+   STUDIO BROWNE — One type system, every page
+   Headings: Manofa. Text: Spectral. Labels: Spectral capitals.
+   Change a value here and the whole site follows.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+:root{
+  --t-size:clamp(0.58rem,0.68vw,0.62rem);      /* body + labels */
+  --t-h1:clamp(1.1rem,3vw,2.3rem);              /* page titles */
+  --t-h2:clamp(0.9rem,1.24vw,1.13rem);          /* section headings */
+  --t-ink:#4a2b23;
+  --t-ink-strong:#3d221b;
+  --t-col:min(25.9rem,100%);                    /* the one text column */
+}
+@media (max-width:760px){
+  :root{--t-size:0.78rem;--t-h2:1.05rem}
+}
+
+/* --- roles ------------------------------------------------- */
+.t-body{font-family:"Spectral",var(--font-serif) !important;font-weight:300 !important;font-style:normal;font-size:var(--t-size) !important;line-height:1.62 !important;letter-spacing:0.004em !important;text-transform:none !important;color:var(--t-ink) !important}
+.t-label{font-family:"Spectral",var(--font-serif) !important;font-weight:400 !important;font-style:normal !important;font-size:var(--t-size) !important;line-height:1.6 !important;letter-spacing:0.1em !important;text-transform:uppercase !important}
+.t-label:not(.t-keep){color:var(--t-ink-strong) !important}
+.t-h1{font-family:var(--font-title) !important;font-weight:400 !important;font-size:var(--t-h1) !important;line-height:1.02 !important;letter-spacing:0 !important;text-transform:uppercase !important;color:var(--t-ink-strong) !important}
+.t-h1 em{font:inherit !important;color:inherit !important;font-style:normal !important}
+.t-h2{font-family:var(--font-title) !important;font-weight:400 !important;font-size:var(--t-h2) !important;line-height:1.1 !important;letter-spacing:0 !important;text-transform:uppercase !important;color:var(--t-ink-strong) !important}
+.t-col{max-width:var(--t-col) !important;width:100%;margin-left:auto !important;margin-right:auto !important;text-align:left !important}
+.t-center{text-align:center !important}
+
+/* --- About / Services blocks (project pages + Studio) ------- */
+.ab{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7.5rem);position:relative;z-index:3}
+.ab-col{max-width:var(--t-col);margin:0 auto;color:var(--t-ink)}
+.ab-h{font-family:var(--font-title);font-weight:400;font-size:var(--t-h2);line-height:1.1;letter-spacing:0;text-transform:uppercase;margin:0 0 0.63rem;color:var(--t-ink-strong)}
+.ab-p{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:var(--t-size);line-height:1.62;letter-spacing:0.004em;margin:0 0 0.75em;text-transform:none;color:var(--t-ink)}
+.ab-k{font-family:"Spectral",var(--font-serif);font-weight:400;font-size:var(--t-size);line-height:1.6;letter-spacing:0.1em;text-transform:uppercase;margin:1.15rem 0 0.55rem;color:var(--t-ink-strong)}
+.ab-d{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:var(--t-size);line-height:1.62;letter-spacing:0.004em;margin:0;color:var(--t-ink);text-transform:none}
+.ab-d em,.ab-q{font-style:italic}
+.ab-q{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:var(--t-size);line-height:1.62;letter-spacing:0.004em;margin:0.75em 0 0;color:var(--t-ink);text-transform:none}
+.ab-q + .ab-p{margin-top:0}
+.ab-cap{font-family:"Spectral",var(--font-serif);font-weight:300;font-style:italic;font-size:var(--t-size);line-height:1.62;color:var(--t-ink);text-align:right;margin:0.7rem 0 0}
+
+/* form fields: same face as labels; 16px on phones so iPhone doesn't zoom */
+input.t-label,textarea.t-label{letter-spacing:0.08em !important}
+@media (max-width:760px){input.t-label,textarea.t-label{font-size:16px !important}}
+
+/* phones: text sits on the same 40px rails as the photos, on every page */
+@media (max-width:720px){.ab{padding-left:0;padding-right:0}}
+.ab-cap{letter-spacing:0.004em}

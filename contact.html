@@ -9,15 +9,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Tell us about your home. Studio Browne takes on a small number of full-service residential commissions each year in Los Angeles and San Francisco.">
-<link rel="canonical" href="https://studio-browne.github.io/SBWEBSITE/contact.html">
+<link rel="canonical" href="https://www.studio-browne.com/contact.html">
 <meta property="og:site_name" content="Studio Browne">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Inquire — Start Your Project | Studio Browne">
 <meta property="og:description" content="Tell us about your home. Studio Browne takes on a small number of full-service residential commissions each year in Los Angeles and San Francisco.">
-<meta property="og:image" content="https://studio-browne.github.io/SBWEBSITE/assets/share/contact.jpg">
+<meta property="og:image" content="https://www.studio-browne.com/assets/share/contact.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://studio-browne.github.io/SBWEBSITE/contact.html">
+<meta property="og:url" content="https://www.studio-browne.com/contact.html">
 <meta name="twitter:card" content="summary_large_image">
 <script src="support.js"></script>
 </head>
@@ -26,12 +26,23 @@
 <!-- @template name="Contact / Inquire" description="Studio Browne — inquiry route with understated underline form on greige panel" -->
 <helmet>
 <script>window.SB_ASSET = "assets";</script>
-<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="tokens/type.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0}
 body{background:var(--panel-greige);color:var(--text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
 ::selection{background:var(--sb-terracotta);color:var(--sb-porcelain)}
 a{color:inherit;text-decoration:none}a:hover{color:var(--sb-terracotta)}
+/* Inquire: same type system as every page (tokens/type.css values) */
+main section.sb-panel div:has(> h1){max-width:var(--t-col) !important;width:100% !important;text-align:left !important}
+main section.sb-panel div:has(> h1) > div:first-child{font-family:"Spectral",var(--font-serif) !important;font-weight:400 !important;font-size:var(--t-size) !important;line-height:1.6 !important;letter-spacing:0.1em !important;text-transform:uppercase !important;color:var(--t-ink-strong) !important}
+main section.sb-panel h1{font-family:var(--font-title) !important;font-weight:400 !important;font-size:var(--t-h1) !important;line-height:1.02 !important;letter-spacing:0 !important;text-transform:uppercase !important;color:var(--t-ink-strong) !important}
+main section.sb-panel h1 + p{font-family:"Spectral",var(--font-serif) !important;font-weight:300 !important;font-size:var(--t-size) !important;line-height:1.62 !important;letter-spacing:0.004em !important;text-transform:none !important;color:var(--t-ink) !important;max-width:none !important;margin-left:0 !important;margin-right:0 !important}
+main section.sb-panel form{width:100% !important;max-width:none !important}
+main section.sb-panel div:has(> h1) > div:first-child,main section.sb-panel h1{text-align:center !important}
+main section.sb-panel form label,main section.sb-panel form button{font-family:"Spectral",var(--font-serif) !important;font-weight:400 !important;font-size:var(--t-size) !important;line-height:1.6 !important;letter-spacing:0.1em !important;text-transform:uppercase !important}
+main section.sb-panel form label{color:var(--t-ink-strong) !important}
+main section.sb-panel form input,main section.sb-panel form textarea{font-family:"Spectral",var(--font-serif) !important;font-weight:300 !important;font-size:max(var(--t-size),0.95rem) !important;letter-spacing:0.004em !important;color:var(--t-ink) !important}
+@media (max-width:760px){main section.sb-panel form input,main section.sb-panel form textarea{font-size:16px !important}}
 @media (max-width:760px){main section{padding-left:0 !important;padding-right:0 !important}main section [style*="84vw"]{width:100% !important}}
 </style>
 </helmet>

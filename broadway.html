@@ -26,8 +26,7 @@
 <x-dc>
 <!-- @template name="Broadway project detail" description="Studio Browne — Broadway project page, essay band + photo grid" -->
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&amp;display=swap">
-<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
+<link rel="stylesheet" href="tokens/fonts.css"><link rel="stylesheet" href="tokens/colors.css"><link rel="stylesheet" href="tokens/typography.css"><link rel="stylesheet" href="tokens/spacing.css"><link rel="stylesheet" href="tokens/effects.css"><link rel="stylesheet" href="tokens/type.css"><link rel="stylesheet" href="styles.css"><script src="ds-bundle.js"></script>
 <script src="image-slot.js"></script>
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0}
@@ -62,19 +61,8 @@ image-slot{aspect-ratio:auto;min-width:0;min-height:0}.sb-grid>*,.ws-row>*,.sb-w
 .ws-face .hand{font-size:clamp(1.45rem,2.3vw,2.35rem);max-width:min(26rem,100%);margin:0}
 .hand.ws-cap{font-size:clamp(1.25rem,1.75vw,1.75rem);max-width:min(30rem,100%);margin:clamp(0.9rem,1.6vw,1.3rem) 0 0}
 .hand.ws-cap[style*="text-align:right"]{margin-left:auto}
-.ws-note{font-family:var(--font-title);font-weight:400;font-size:clamp(0.74rem,0.9vw,0.9rem);line-height:1.28;letter-spacing:-0.005em;text-transform:none;color:#4f4239;max-width:26rem;margin:clamp(2.2rem,5vw,4.5rem) 0 0}
+.ws-note{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:var(--t-size);line-height:1.62;letter-spacing:0.004em;text-transform:none;color:var(--t-ink);max-width:var(--t-col);margin:clamp(2.2rem,5vw,4.5rem) 0 0}
 @media (max-width:820px){.ws-note{margin-top:1.4rem}}
-/* About block: one narrow column, Manofa heading, Spectral text */
-.ab{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7.5rem)}
-.ab-col{max-width:min(25.9rem,100%);margin:0 auto;color:#4a2b23}
-.ab-h{font-family:var(--font-title);font-weight:400;font-size:clamp(0.9rem,1.24vw,1.13rem);line-height:1.1;letter-spacing:0;text-transform:uppercase;margin:0 0 0.63rem;color:#3d221b}
-.ab-p{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.62;letter-spacing:0.004em;margin:0 0 0.75em;text-transform:none;color:#4a2b23}
-.ab-k{font-family:"Spectral",var(--font-serif);font-weight:400;font-size:clamp(0.58rem,0.68vw,0.62rem);letter-spacing:0.1em;text-transform:uppercase;margin:1.15rem 0 0.55rem;color:#3d221b}
-.ab-d{font-family:"Spectral",var(--font-serif);font-weight:300;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.62;margin:0;color:#4a2b23}
-.ab-d em{font-style:italic}
-.ab-cap{font-family:"Spectral",var(--font-serif);font-weight:300;font-style:italic;font-size:clamp(0.58rem,0.68vw,0.62rem);line-height:1.4;color:#4a2b23;text-align:right;margin:0.7rem 0 0}
-main.ws > section:first-child > div{font-family:"Spectral",var(--font-serif) !important;font-weight:400 !important}
-@media (max-width:760px){.ab-p,.ab-d,.ab-k,.ab-cap{font-size:0.78rem}.ab-h{font-size:1.05rem}}
 @media (max-width:820px){.ws-essay{grid-template-columns:1fr;gap:1.4rem}.ws-face{padding:1.5rem 0 0.5rem}.ws-details{justify-content:flex-start;gap:0.7rem 1.6rem}.ws-row{grid-template-columns:1fr !important;gap:0.75rem !important;padding-top:0.75rem !important;padding-bottom:0.75rem !important}.ws-flip>*{grid-column:auto !important;grid-row:auto !important;order:0 !important}}
 @media (max-width:760px){main section[style*="panel-camel"]{background:transparent !important;min-height:0 !important;padding:1rem 0 3.5rem !important}main section[style*="panel-camel"] .ft-sep{display:block;height:0;overflow:hidden}}
 </style>
@@ -82,9 +70,9 @@ main.ws > section:first-child > div{font-family:"Spectral",var(--font-serif) !im
 <x-import component-from-global-scope="StudioBrowneDesignSystem_6dac50.CornerFrame" tone="ink" hide-bottom="{{ true }}" on-home="{{ goHome }}" on-right="{{ goWork }}" on-left="{{ goHome }}" mark-src="assets/logo-mark.png" hint-size="1px,1px"></x-import>
 <main class="ws" ref="{{ rootRef }}" data-screen-label="Broadway" style="width:100%;overflow-x:clip">
 <section style="text-align:center;padding:clamp(7rem,12vw,10rem) 1.5rem clamp(2rem,5vw,3rem)">
-<div class="fu" style="font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-terracotta);margin-bottom:1rem">The Ribbon</div>
-<h1 class="fu" style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.1rem,3vw,2.3rem);margin:0;line-height:1.02;text-transform:uppercase">Broadway</h1>
-<div class="fu" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary);margin-top:1rem">Pacific Heights, SF · 2019 · Full-Service Residential</div>
+<div class="fu t-label" style="font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--sb-terracotta);margin-bottom:1rem">The Ribbon</div>
+<h1 class="fu t-h1" style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.1rem,3vw,2.3rem);margin:0;line-height:1.02;text-transform:uppercase">Broadway</h1>
+<div class="fu t-label" style="font-family:var(--font-sans);font-size:0.68rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-secondary);margin-top:1rem">Pacific Heights, SF · 2019 · Full-Service Residential</div>
 </section>
 <section class="fu ws-band" style="padding-top:0;padding-bottom:0"><div class="ws-plate" style="aspect-ratio:3/2;width:100%"><image-slot alt="Detail of the blackened steel ribbon chandelier, Broadway" id="proj-broadway-open" src="assets/images/broadway/broadway-open.webp" shape="rect" placeholder="Drop the hero photo" style="width:100%;height:100%"></image-slot></div></section>
 <section class="ab fu" aria-label="About the project">
@@ -109,14 +97,14 @@ main.ws > section:first-child > div{font-family:"Spectral",var(--font-serif) !im
 <section class="fu ws-band"><div class="ws-plate" style="aspect-ratio:4/3;width:100%"><image-slot alt="Tufted leather daybed hanging from the ceiling, Broadway" id="proj-broadway-bed" src="assets/images/broadway/broadway-bed.webp" shape="rect" placeholder="Drop a landscape photo" style="width:100%;height:100%"></image-slot></div><p class="hand ws-cap" style="text-align:right;transform-origin:right top">One statement piece. Everything else, supporting&nbsp;cast.</p></section>
 <section class="fu ws-band"><div class="ws-plate" style="aspect-ratio:4/3;width:100%"><image-slot alt="Primary bedroom with a ring light fixture overhead, Broadway" id="proj-broadway-land6" src="assets/images/broadway/broadway-land6.webp" shape="rect" placeholder="Drop a landscape photo" style="width:100%;height:100%"></image-slot></div></section>
 <section style="text-align:center;padding:clamp(3rem,6vw,5rem) 1.5rem">
-<a class="fu sb-btn" href="work.html">View all projects</a>
+<a class="fu sb-btn t-label t-keep" href="work.html">View all projects</a>
 </section>
 <section style="background:var(--panel-camel);min-height:80vh;display:flex;align-items:center;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(5rem,10vw,10rem)">
 <div class="fu" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4rem;max-width:520px">
 <img src="assets/logo-mark.png" alt="Studio Browne" style="height:64px;width:auto;opacity:0.9">
-<p style="font-family:var(--font-title);font-size:1.25rem;line-height:1.5;color:var(--text-primary);margin:0.3rem 0 0;max-width:24ch">Let&rsquo;s live.</p>
-<div style="font-family:var(--font-sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-primary);line-height:2.1">Studio Browne<span class="ft-sep"> &middot; </span>Beverly Hills, CA<br><a href="mailto:matt@studio-browne.com">matt@studio-browne.com</a><span class="ft-sep"> &middot; </span><a href="tel:+13104862867">310.486.2867</a></div>
-<a href="contact.html" class="sb-cta" style="margin-top:0.6rem;display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;background:var(--sb-ink);color:var(--sb-porcelain);font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;border-radius:999px">Book a consultation <span aria-hidden="true">&rarr;</span></a>
+<p class="t-h2" style="font-family:var(--font-title);font-size:1.25rem;line-height:1.5;color:var(--text-primary);margin:0.3rem 0 0;max-width:24ch">Let&rsquo;s live.</p>
+<div class="t-label" style="font-family:var(--font-sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-primary);line-height:2.1">Studio Browne<span class="ft-sep"> &middot; </span>Beverly Hills, CA<br><a href="mailto:matt@studio-browne.com">matt@studio-browne.com</a><span class="ft-sep"> &middot; </span><a href="tel:+13104862867">310.486.2867</a></div>
+<a href="contact.html" class="sb-cta t-label t-keep" style="margin-top:0.6rem;display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;background:var(--sb-ink);color:var(--sb-porcelain);font-family:var(--font-sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;border-radius:999px">Book a consultation <span aria-hidden="true">&rarr;</span></a>
 </div>
 </section>
 </main>
