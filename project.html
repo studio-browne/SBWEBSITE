@@ -10,6 +10,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="A house in San José del Cabo, Baja California Sur, now in design with Studio Browne. The full story and photography will follow on completion.">
+<link rel="canonical" href="https://www.studio-browne.com/project.html">
+<meta property="og:url" content="https://www.studio-browne.com/project.html">
 <meta property="og:site_name" content="Studio Browne">
 <meta property="og:type" content="website">
 <meta property="og:title" content="San José del Cabo — In Progress | Studio Browne">
@@ -144,7 +146,7 @@ class Component extends DCLogic {
   }
   componentWillUnmount(){ if(this._raf) cancelAnimationFrame(this._raf); if(this._measure) window.removeEventListener('resize',this._measure); }
   componentDidUpdate(){ this.apply(); }
-  renderVals(){ return { rootRef:(el)=>this.apply(el), goHome:()=>{window.location.href="index.html";}, goWork:()=>{window.location.href="work.html";} }; }
+  renderVals(){ return { rootRef:(el)=>this.apply(el), goHome:()=>{window.location.href="/";}, goWork:()=>{window.location.href="work.html";} }; }
 }
 </script>
 </body>
